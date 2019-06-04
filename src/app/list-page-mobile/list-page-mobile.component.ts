@@ -149,4 +149,8 @@ export class ListPageMobileComponent implements OnInit {
   ngOnInit() {
   }
 
+  openModalTools() {
+    alert(5)
+  }
+
 }

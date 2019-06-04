@@ -2664,6 +2664,10 @@ input:focus {
   font-size: calc(100vw * 15 / 360);
   line-height: calc(100vw * 24 / 360); }
 
+.h5-res-320 {
+  font-size: calc(100vw * 14 / 360);
+  line-height: calc(100vw * 22 / 360); }
+
 .node1 {
   width: 100vw;
   height: calc(100vw * 180 / 360); }
@@ -3201,3 +3205,29 @@ input:focus {
 
 .node-8 .n8_21 span {
   font-size: calc(100vw * 24 / 360); }
+
+.node-9 {
+  width: 100vw;
+  height: 100vh; }
+
+.node-9 .n9_1 {
+  width: calc(100vw * 176 / 360);
+  height: calc(100vw * 176 / 360); }
+
+.node-9 .n9_2 {
+  width: calc(100vw * 296 / 360);
+  margin-top: calc(100vw * 12 / 360); }
+
+.node-9 .n9_3 {
+  margin-top: calc(100vw * 12 / 360);
+  width: calc(100vw * 296 / 360);
+  height: calc(100vw * 32 / 360);
+  border-radius: calc(100vw * 4 / 360); }
+
+.node-10 {
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  left: 0; }

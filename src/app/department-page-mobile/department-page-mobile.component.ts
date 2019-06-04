@@ -14,7 +14,7 @@ export class DepartmentPageMobileComponent implements OnInit {
   }
 
   narrowProductList() {
-    this.isNarrowList = !this.isNarrowList
+    this.isNarrowList = !this.isNarrowList;
   }
 
 }

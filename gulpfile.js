@@ -12,7 +12,7 @@ var walk = require('walk')
 
 const targetFolder = './src/';
 const allDataFolders = ['./src'] 
-const allDataFoldersMustWatch = ['./src/app/detail-page/detail-page.component.html','./src/app/detail-page/error-connection-page-mobile.component.html', './src/app/department-page-mobile/department-page-mobile.component.html', './src/app/list-page/list-page.component.html', './src/app/list-page-mobile/list-page-mobile.component.html'] 
+const allDataFoldersMustWatch = ['./src/app/detail-page/detail-page.component.html','./src/app/error-connection-page-mobile/error-connection-page-mobile.component.html', './src/app/department-page-mobile/department-page-mobile.component.html', './src/app/list-page/list-page.component.html', './src/app/list-page-mobile/list-page-mobile.component.html'] 
 /*===============GLOBAL DECLARE=================*/
 
 gulp.task('init', function () {

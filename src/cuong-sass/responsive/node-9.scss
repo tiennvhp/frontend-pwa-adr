@@ -1,0 +1,21 @@
+.node-9 {
+	width: 100vw;
+	height: 100vh;
+
+	.n9_1 {
+		width: calc(100vw * 176 / 360);
+		height: calc(100vw * 176 / 360);
+	}
+
+	.n9_2 {
+		width: calc(100vw * 296 / 360);
+		margin-top: calc(100vw * 12 / 360);
+	}
+
+	.n9_3 {
+		margin-top: calc(100vw * 12 / 360);
+		width: calc(100vw * 296 / 360);
+		height: calc(100vw * 32 / 360);
+		border-radius: calc(100vw * 4 / 360); 
+	}
+}
