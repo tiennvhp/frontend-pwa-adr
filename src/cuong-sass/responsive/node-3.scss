@@ -1,0 +1,74 @@
+.node-3 {
+	width: 100vw;
+
+	.n3-1 {
+		width: 100%;
+		height: calc(100vw * 48 / 360);
+	}
+
+	.n3-2 {
+		font-size: calc(100vw * 15 / 360);
+	}
+
+	.n3-3 {
+		font-size: calc(100vw * 13 / 360);
+	}
+
+	.n3-4 {
+		font-size: calc(100vw * 24 / 360);
+	}
+
+	.n3-5 {
+		overflow-y: auto;
+		width: 100%;
+		height: calc(100vw * 80 / 360);
+	}
+
+	.n3-6 {
+		width: calc(100vw * 148 / 360);
+		height: calc(100vw * 64 / 360);
+		margin-right: calc(100vw * 8 / 360);
+	}
+
+	.n3-7 {
+		width: 100%;
+		height: calc(100vw * 29 / 360);
+		position: relative;
+		border-bottom: 1px dashed $color-67;
+
+		&:after {
+			position: absolute;
+			content: '';
+			width: calc(100vw * 7 / 360);
+			height: calc(100vw * 7 / 360);
+			border-radius: 100%;
+			background: $color-67;
+		    bottom: calc(100vw * -4 / 360);
+		    left: calc(100vw * -3 / 360);
+		}
+
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: calc(100vw * 7 / 360);
+			height: calc(100vw * 7 / 360);
+			border-radius: 100%;
+			background: $color-67;
+		    bottom: calc(100vw * -4 / 360);
+		    right: calc(100vw * -3 / 360);
+		}
+	}
+
+	.n3-8 {
+		height: calc(100% - 100vw * 29 / 360);
+	}
+
+	.n3-9 {
+		font-size: calc(100vw * 13 / 360);
+	}
+
+	.n3-10 {
+		font-size: calc(100vw * 16 / 360);
+	} 
+}

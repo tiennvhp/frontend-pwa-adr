@@ -1,0 +1,1690 @@
+<div class="bg-22 ">
+  <div class="wx-1232 mx-auto ">
+    <ul class="hx-48 flex-row flex-start_center ">
+      <li>
+        <div class="flex-row flex-start_center txt-color-16 h6-re mxr-4 ">
+          <span>Adayroi</span>
+          <span class="icon-right-24px fsx-24 mxl-8 "></span>
+        </div>
+      </li>
+
+      <li>
+        <div class="flex-row flex-start_center txt-color-16 h6-re mxr-4 ">
+          <span>Category 1</span>
+          <span class="icon-right-24px fsx-24 mxl-8 "></span>
+        </div>
+      </li>      
+      <li>
+        <div class="flex-row flex-start_center txt-color-16 h6-re mxr-4 ">
+          <span>Adayroi</span>
+          <span class="icon-right-24px fsx-24 mxl-8 "></span>
+        </div>
+      </li>
+
+      <li>
+        <div class="flex-row flex-start_center txt-color-16 h6-re mxr-4 ">
+          <span>Category 1</span>
+        </div>
+      </li>      
+    </ul>
+
+    <div class="bg-67 flex-row flex-between_start pxb-32 pxt-32 ">
+      <div class="wx-648 hx-520 mxl-32 flex-row flex-start_start ">
+
+        <div [ngClass]="{ 'effect-7': isActiveThumbsSlide }" class="wx-63 hx-100pc overflow-hidden p-rel ">
+
+
+          <div 
+            (click)="upMoveThumbs()" 
+            class="p-abs wx-60 hx-60 bg-67 topx-0 leftx-0 flex-col flex-center_center cursor-pointer zindex-1 e7-2 "
+            [ngClass]="isActiveMoveUp ? '' : 'effect-8'"
+          >
+            <span class="icon-up-24px fsx-24 "></span>
+          </div>
+          <ul 
+            class="e7-1 "
+            [ngStyle]="{
+                'transition': 'transform 0.3s',
+                'transform': 'translateY('+ initThumbListY +'px)'
+            }"
+          >
+            <li 
+              *ngFor="let thumb of thumbsData; let i = index " 
+              (click)="activeThumb(i, thumb)" 
+            >
+              <div 
+                *ngIf="thumb.type === 'img'"  
+                class="wx-56 hx-56 radius-4_4_4_4  bg-cover cursor-pointer mxb-8 effect-9 " 
+                [ngStyle]="{'background-image': 'url('+ thumb.url +')'}" 
+                [ngClass]="(activeIndex === i) ? 'border-1_solid_5' : 'border-1_solid_19'"
+              ></div>        
+
+              <div 
+                *ngIf="thumb.type === 'video'" 
+                class="wx-56 hx-56 radius-4_4_4_4 bg-cover cursor-pointer flex-col flex-center_center mxb-8 effect-9 " 
+                [ngStyle]="{'background-image': 'url('+ thumb.url +')'}" 
+                [ngClass]="(activeIndex === i) ? 'border-1_solid_5' : 'border-1_solid_19'"
+              >
+                <div class="wx-40 hx-40 border-1_solid_67 radius-circle bg-rgba_0_0_0_6 flex-col flex-center_center ">
+                  <span class="icon-play-24px fsx-24 txt-color-67 "></span>
+                </div>
+              </div>   
+
+              <div 
+                *ngIf="thumb.type === 'panorama'" 
+                class="wx-56 hx-56 radius-4_4_4_4 bg-cover flex-col flex-center_center cursor-pointer mxb-8 effect-9  " 
+                [ngStyle]="{'background-image': 'url('+ thumb.url +')'}"
+                [ngClass]="(activeIndex === i) ? 'border-1_solid_5' : 'border-1_solid_19'"
+              >
+                <div class="wx-50 hx-50 bg-cover " style="background-image: url(https://i.ibb.co/HgD8w4s/Det.png)"></div>
+              </div>  
+            </li>
+          </ul>     
+          <div 
+            (click)="downMoveThumbs()" 
+            class="p-abs wx-60 hx-60 bg-67 bottomx-0 leftx-0 flex-col flex-center_center cursor-pointer zindex-1 e7-2 "
+            [ngClass]="isActiveMoveDown ? '' : 'effect-8'"
+          >
+            <span class="icon-down-24px fsx-24 "></span>  
+          </div>      
+
+        </div>
+
+        <div class="hx-100pc wx-576 p-rel mxl-16 flex-row flex-center_center ">
+          <div 
+            *ngIf="bigContentType === 'img'"
+            class="wx-504 hx-504 bg-cover cursor-pointer p-rel effect-10 " 
+            [ngStyle]="{'background-image': 'url('+ currentBigContent +')'}" 
+            (mousemove)="mouseMoveBigImage($event)"
+          >
+
+
+            <div 
+              *ngIf="isShowPicker"
+              class="wx-150 hx-150 bg-rgba_73_122_218_3 "
+              [ngStyle]="{
+                  'transform': 'translate('+ pickerX +'px, '+ pickerY +'px)'
+              }"
+            ></div>
+
+
+
+
+            <div class="p-abs leftx-504 wx-100pc hx-100pc overflow-hidden topx-0 bg-67 bg-cover shadow-0_0_16_0_0_0_2 zindex-1 e10-1 ">
+              <div
+                class="wx-1693 hx-1693 p-abs topx-0 leftx-0 bg-cover " 
+                [ngStyle]="{
+                    'transform': 'translate('+ pickerX +'px, '+ pickerY +'px)',
+                    'background-image': 'url('+ currentBigContent +')',
+                    'transform': 'translate('+ (-pickerX * 3.4) +'px, '+ (-pickerY * 3.4) +'px)'
+                }"
+              ></div>
+            </div>
+          </div>
+
+          <div 
+            *ngIf="bigContentType === 'panorama'"
+            class="wx-504 hx-504 bg-cover p-rel " 
+            [ngStyle]="{'background-image': 'url('+ currentBigContent +')'}" 
+          >
+            
+          </div>
+
+          <div 
+            *ngIf="bigContentType === 'video'"
+            class="wx-504 hx-450 bg-cover " 
+          >
+            <iframe class="wx-100pc hx-100pc " src="https://www.youtube.com/embed/1irMvQqcnxs" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <p class="wx-100pc p-abs bottomx-0 leftx-0 h6-re txt-color-16 text-align-center ">Hình ảnh chỉ mang tính chất minh họa</p>
+        </div>
+      </div>
+      <div class="wx-504 mxr-32 ">
+        <div class="flex-row flex-between_start ">
+          <h1 class="h1-md ">Xe máy điện VinFast Klara phiên bản dùng pin Lithium-ion (Đen)</h1>
+          <div class="flex-row flex-end_center mxt-5 ">
+            <div class="txt-color-17 icon-share-24px fsx-24 cursor-pointer "></div>
+            <div class="txt-color-17 mxl-16 icon-heart-24px fsx-24 cursor-pointer "></div>
+          </div>
+        </div>
+        <div class="flex-row flex-start_center p-rel effect-4 mxt-2 ">
+          <div class="flex-row flex-start_center ">
+            <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+            <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+            <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+            <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+            <span class="icon-star-16px txt-color-18 mxr-2 fsx-12 "></span>
+          </div>
+          <span class="h7-re txt-color-16 mxl-6 ">(25)</span>
+        </div>  
+        <div class="flex-row flex-start_center txt-color-16 h6-re ">
+          <p>
+            <span>Thương hiệu: </span>
+            <span class="txt-color-25 ">Vinfast</span>
+          </p>
+          <p class="mxl-8 mxr-8 ">|</p>
+          <p>
+            <span>Nhà cung cấp: </span>
+            <span class="txt-color-25 ">Vinfast</span>
+          </p>
+        </div>
+
+        <p class="mxt-4 h6-re ">
+            Quý khách nhận xe và làm thủ tục giấy tờ tại showroom
+            Ngày nhận xe sẽ theo lịch của Đại lý và xác nhận của nhân viên Adayroi với Khách hàng
+            Giá bán xe đã bao gồm thuế VAT, chưa bao gồm thuế trước bạ và các chi phí khác     
+            <br>
+            <a href="" class="txt-color-25 " >Xem thêm</a>     
+        </p>
+
+        <div class="flex-row flex-start_center mxt-8 ">
+          <div class="flex-row flex-start_center ">
+            <span class="icon-clock-16px fsx-16 txt-color-26 "></span>
+            <p class="mxl-8 h6-re ">Còn <span class="h6-bo ">8 giờ 15 phút 24 giây</span></p>
+          </div>
+          <div class="flex-row flex-start_center mxl-12 ">
+            <span class="icon-group-16px fsx-16 txt-color-26 "></span>
+            <p class="mxl-8 h6-re ">3.250 người đã mua</p>
+          </div>
+          <div class="flex-row flex-start_center mxl-12 ">
+            <span class="icon-voucher-16px fsx-16 txt-color-26 "></span>
+            <p class="mxl-8 h6-re ">Hỗ trợ E-Voucher</p>
+            <span class="txt-color-17 mxl-4 icon-help-16px fsx-16 "></span>
+          </div>
+        </div>
+
+        <div class="pxt-8 pxb-12 pxl-16 pxr-16 bg-22 mxt-4 ">
+          <div class="flex-row flex-start_center ">
+            <h1 class="txt-color-5 h1-bo ">39.900.000đ</h1>
+            <h2 class="txt-color-16 h2-re mxl-8 txt-deco-line_through ">57.000.000đ</h2>
+            <div class="flex-row flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-8 mxl-8 ">
+              <span class="h5-bo txt-color-67 ">-30%</span>
+            </div>
+            <div class="hx-20 bg-5 radius-5_5_5_5 mxl-4 flex-row flex-between_center overflow-hidden ">
+              <span class="h8-bo txt-color-67 pxl-8 pxr-8 ">Siêu giảm giá</span>
+              <span class="bg-67 txt-color-5 h8-bo border-1_solid_5 radius-0_5_5_0 pxl-4 pxr-4 ">-50%++</span>
+            </div>
+          </div>
+          <div class="mxt-4 flex-row flex-start_center ">
+            <span class="icon-vinid-special fsx-12 txt-color-5"></span>
+            <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span> vào thẻ VinID</p>
+            <span class="txt-color-17 mxl-4 icon-help-16px fsx-16 "></span>
+          </div>
+        </div>
+        <div class="pxt-8 pxb-12 pxl-16 pxr-16 bg-52 mxt-4 border-b_1_solid_20  ">
+          <div class="flex-row flex-start_center ">
+            <h1 class="txt-color-5 h1-bo ">39.900.000đ</h1>
+            <h2 class="txt-color-16 h2-re mxl-8 txt-deco-line_through ">57.000.000đ</h2>
+            <div class="flex-row flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-8 mxl-8 ">
+              <span class="h5-bo txt-color-67 ">-30%</span>
+            </div>
+            <div class="hx-20 bg-5 radius-5_5_5_5 mxl-4 flex-row flex-between_center overflow-hidden ">
+              <span class="h8-bo txt-color-67 pxl-8 pxr-8 ">Siêu giảm giá</span>
+              <span class="bg-67 txt-color-5 h8-bo border-1_solid_5 radius-0_5_5_0 pxl-4 pxr-4 ">-50%++</span>
+            </div>
+          </div>
+          <div class="mxt-4 h7-re txt-color-16 ">
+            <span>Khối lượng: 0.5 Kg</span>
+            <span class="mxl-8 mxr-8 ">|</span>
+            <span>Đơn giá: 290.000đ/Kg</span>
+          </div>
+          <div class="mxt-4 flex-row flex-start_center ">
+            <span class="icon-vinid-special fsx-12 txt-color-5"></span>
+            <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span> vào thẻ VinID</p>
+            <span class="txt-color-17 mxl-4 icon-help-16px fsx-16 "></span>
+          </div>
+          <p class="h6-re txt-color-44 ">
+            Sản phẩm tạm thời chưa giao hàng tới 
+            <span class="h6-bo ">Vĩnh Tuy, Hai Bà Trưng, Hà Nội.</span>
+
+            Bạn có thể chọn khu vực hỗ trợ giao hàng gần bạn:
+          </p>
+          <div class="flex-row flex-start_center mxt-4 ">
+            <button class="bg-67 mxr-8 radius-4_4_4_4 shadow-0_0_16_0_0_0_2 flex-col flex-center_center ">
+              <span class="h6-re pxl-12 pxr-12 ">Phường Lê Đại Hành</span>
+            </button>
+            <button class="bg-67 mxr-8 radius-4_4_4_4 shadow-0_0_16_0_0_0_2 flex-col flex-center_center ">
+              <span class="h6-re pxl-12 pxr-12 ">Phường Minh Khai</span>
+            </button>
+            <button class="bg-67 mxr-8 radius-4_4_4_4 shadow-0_0_16_0_0_0_2 flex-col flex-center_center ">
+              <span class="h6-re pxl-12 pxr-12 ">Phường Quỳnh Mai</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex-row flex-start_center ">
+          <div class="wx-168 hx-32 border-r_1_solid_20 bg-52 flex-row flex-start_center ">
+            <span class="icon-location-16px fsx-16 mxl-16 mxr-16 txt-color-5 "></span>
+            <span class="h6-re ">Thay đổi khu vực</span>
+          </div>
+          <div class="wx-168 hx-32 border-r_1_solid_20 bg-52 flex-row flex-start_center ">
+            <span class="icon-chat-16px fsx-16 mxl-16 mxr-16 txt-color-5 "></span>
+            <span class="h6-re ">Chat với Adayroi</span>
+          </div>
+          <div class="wx-168 hx-32 bg-52 flex-row flex-start_center ">
+            <span class="icon-call-16px fsx-16 mxl-16 mxr-16 txt-color-5 "></span>
+            <span class="h6-re ">Hotline 1900-1901</span>
+          </div>
+        </div>
+
+        <div class="hx-24 wx-100pc flex-row flex-start_center mxt-4">
+          <div class="wx-24 hx-24 bg-cover " style="background-image: url(https://i.ibb.co/LSf005B/calendar-color-24px.png)"></div>
+          <p class="mxl-8 h6-re flex-row flex-start_center">Trả góp lãi suất 0% chỉ từ <span class="h6-bo ">1.250.000đ/tháng</span> <span class="icon-down-16px fsx-16 "></span></p>
+        </div>
+
+        <div class="hx-40 bg-5 mxt-8 flex-row flex-between_center ">
+          <div class="flex-row flex-start_center ">
+            <div class="wx-111 hx-24 mxl-8 ">
+              <span class="icon-flashsale-tag fsx-27 ">
+                <span class="path1"></span>
+                <span class="path2"></span>
+              </span>            
+            </div>
+
+            <div class="wx-184 mxl-16 hx-16 radius-sides_circle bg-rgba_256_256_256_7 p-rel flex-row flex-center_center ">
+              <div class="wx-80pc hx-100pc radius-sides_circle bg-67 p-abs leftx-0 topx-0 "></div>
+              <span class="h8-bo txt-color-5 p-rel zindex-2 ">Đã bán 40</span>
+            </div>            
+          </div>
+
+          <div class="flex-row flex-end_center ">
+            <span class="txt-color-67 h6-re ">Kết thúc sau</span>
+            <div class="mxl-8 flex-row flex-start_center ">
+              <div class="wx-24 mxr-6 after-9 hx-24 radius-4_4_4_4 bg-71 flex-col flex-center_center ">
+                <span class="txt-color-67 h5-bo ">21</span>
+              </div>
+              <div class="wx-24 mxr-6 after-9 hx-24 radius-4_4_4_4 bg-71 flex-col flex-center_center ">
+                <span class="txt-color-67 h5-bo ">21</span>
+              </div>
+              <div class="wx-24 mxr-8 hx-24 radius-4_4_4_4 bg-71 flex-col flex-center_center ">
+                <span class="txt-color-67 h5-bo ">54</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pxt-8 pxb-12 pxl-16 pxr-16 bg-22 mxt-4 p-rel ">
+          <div class="flex-row flex-start_center ">
+            <h1 class="txt-color-5 h1-bo ">39.900.000đ</h1>
+            <h2 class="txt-color-16 h2-re mxl-8 txt-deco-line_through ">57.000.000đ</h2>
+            <div class="flex-row flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-8 mxl-8 ">
+              <span class="h5-bo txt-color-67 ">-30%</span>
+            </div>
+          </div>
+          <div class="mxt-4 flex-row flex-start_center ">
+            <span class="icon-VinID txt-color-5"></span>
+            <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span> vào thẻ VinID</p>
+            <span class="txt-color-17 mxl-4 icon-help-16px fsx-16 "></span>
+          </div>
+          <div class="wx-152 hx-32 p-abs radius-4_4_4_4 bg-67 cursor-pointer topx-20 rightx-30 shadow-0_0_16_0_0_0_2 flex-row flex-start_center ">
+            <span class="icon-car-16px fsx-16 txt-color-71 mxl-12 mxr-12 "></span>
+            <span class="h6-re ">Phí lắn bánh</span>
+            <span class="icon-down-16px fsx-16 mxl-16 "></span>
+          </div>
+        </div>
+        
+
+        <div class="pxt-8 pxb-12 pxl-16 pxr-16 bg-22 mxt-4 p-rel ">
+          <div class="flex-row flex-start_center ">
+            <h1 class="txt-color-5 h1-bo ">39.900.000đ</h1>
+            <h2 class="txt-color-16 h2-re mxl-8 txt-deco-line_through ">57.000.000đ</h2>
+            <div class="flex-row flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-8 mxl-8 ">
+              <span class="h5-bo txt-color-67 ">-30%</span>
+            </div>
+          </div>
+          <div class="mxt-4 flex-row flex-start_center ">
+            <span class="icon-VinID txt-color-5"></span>
+            <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span> vào thẻ VinID</p>
+            <span class="txt-color-17 mxl-4 icon-help-16px fsx-16 "></span>
+          </div>
+
+          <div class="wx-131 hx-32 p-abs radius-4_4_4_4 bg-67 cursor-pointer topx-20 rightx-30 shadow-0_0_16_0_0_0_2 flex-row flex-start_center ">
+            <span class="icon-file-16px fsx-16 txt-color-71 mxl-12 mxr-12 "></span>
+            <span class="h6-re ">Menu chi tiết</span>
+          </div>
+        </div>
+
+
+        <div class="pxt-8 pxb-12 pxl-16 pxr-16 bg-22 mxt-4 p-rel ">
+          <h1 class="txt-color-16 h1-bo ">Tạm hết hàng</h1>
+        </div>
+        
+
+        <div class="mxt-12 ">
+          <h1 class="h6-bo ">Sản phẩm có thể bạn quan tâm</h1>
+          <ul class="flex-row flex-between_center mxt-8 ">
+            <li>
+              <div class="wx-120 hx-178 border-1_solid_20 radius-4_4_4_4 ">
+                <div class="flex-col flex-center_center mxt-4 ">
+                  <div class="wx-88 hx-88 bg-cover " style="background-image: url(https://i.ibb.co/9rRPpPG/Image.png);"></div>
+                  <p class="text-align-left hx-32 mxl-16 wx-100pc h7-re ">
+                    Nạc thăn heo 0.5kg
+                  </p>
+                  <p class="h6-bo txt-color-5 wx-100pc text-align-left mxl-16 ">35.700đ</p>
+                  <div class="wx-104 hx-20 bg-21 mxt-4 radius-4_4_4_4 flex-row flex-start_center ">
+                    <span class="icon-vinid-special txt-color-5"></span>
+                    <span class="h7-md mxl-4 ">+3.500đ</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="wx-120 hx-178 border-1_solid_20 radius-4_4_4_4 ">
+                <div class="flex-col flex-center_center mxt-4 ">
+                  <div class="wx-88 hx-88 bg-cover " style="background-image: url(https://i.ibb.co/9rRPpPG/Image.png);"></div>
+                  <p class="text-align-left hx-32 mxl-16 wx-100pc h7-re ">
+                    Thịt lợn Mán rút xương 1kg
+                  </p>
+                  <p class="h6-bo txt-color-5 wx-100pc text-align-left mxl-16 ">35.700đ</p>
+                  <div class="wx-104 hx-20 bg-21 mxt-4 radius-4_4_4_4 flex-row flex-start_center ">
+                    <span class="icon-vinid-special txt-color-5"></span>
+                    <span class="h7-md mxl-4 ">+3.500đ</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="wx-120 hx-178 border-1_solid_20 radius-4_4_4_4 ">
+                <div class="flex-col flex-center_center mxt-4 ">
+                  <div class="wx-88 hx-88 bg-cover " style="background-image: url(https://i.ibb.co/9rRPpPG/Image.png);"></div>
+                  <p class="text-align-left hx-32 mxl-16 wx-100pc h7-re ">
+                    Thịt lợn Mán rút xương 1kg
+                  </p>
+                  <p class="h6-bo txt-color-5 wx-100pc text-align-left mxl-16 ">35.700đ</p>
+                  <div class="wx-104 hx-20 bg-21 mxt-4 radius-4_4_4_4 flex-row flex-start_center ">
+                    <span class="icon-vinid-special txt-color-5"></span>
+                    <span class="h7-md mxl-4 ">+3.500đ</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="wx-120 hx-178 border-1_solid_20 radius-4_4_4_4 ">
+                <div class="flex-col flex-center_center mxt-4 ">
+                  <div class="wx-88 hx-88 bg-cover " style="background-image: url(https://i.ibb.co/9rRPpPG/Image.png);"></div>
+                  <p class="text-align-left hx-32 mxl-16 wx-100pc h7-re ">
+                    Thịt lợn Mán rút xương 1kg
+                  </p>
+                  <p class="h6-bo txt-color-5 wx-100pc text-align-left mxl-16 ">35.700đ</p>
+                  <div class="wx-104 hx-20 bg-21 mxt-4 radius-4_4_4_4 flex-row flex-start_center ">
+                    <span class="icon-vinid-special txt-color-5"></span>
+                    <span class="h7-md mxl-4 ">+3.500đ</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-row flex-start_center mxt-16 ">
+          <h1 class="wx-80 h6-re txt-color-16 text-align-left ">Mã giảm giá</h1>
+          <ul class="flex-row flex-start_center mxl-8 ">
+            <li>
+              <div class="hx-20 bg-10 border-1_dashed_5 flex-row flex-center_center pxl-8 pxr-8 ">
+                <span class="h7-md txt-color-5 ">GIẢM 10%</span>
+              </div>
+            </li>
+            <li>
+              <div class="hx-20 bg-10 mxl-8 border-1_dashed_5 flex-row flex-center_center pxl-8 pxr-8 ">
+                <span class="h7-md txt-color-5 ">GIẢM 100.000đ</span>
+              </div>
+            </li>
+            <li>
+              <div class="hx-20 bg-10 mxl-8 border-1_dashed_5 flex-row flex-center_center pxl-8 pxr-8 ">
+                <span class="h7-md txt-color-5 ">GIẢM 20.000.000đ</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex-row flex-start_start mxt-12 ">
+          <h1 class="wx-80 h6-re txt-color-16 text-align-left ">Giao hàng tới</h1>
+          <div class="mxl-8 ">
+            <div class="flex-row flex-start_center ">
+              <h1 class="h6-bo ">Phường 2, Quận 1, Hồ Chí Minh</h1>
+              <span class="icon-down-16px fsx-16 "></span>
+            </div>
+            <div class="flex-row flex-start_center mxt-2 ">
+              <p class="h7-re txt-color-16 ">Giao hàng trong 3 ngày làm việc - <span class="txt-color-37 ">Miễn phí</span></p>
+              <span class="txt-color-17 mxl-4 icon-help-16px fsx-16 "></span>
+            </div>
+
+            <div class="flex-row flex-start_center mxt-2 ">
+              <p class="h7-re txt-color-16 ">Giao hàng trong 3 ngày làm việc - <span class="txt-color-5 ">30.000đ</span></p>
+              <span class="txt-color-17 mxl-4 icon-help-16px fsx-16 "></span>
+            </div>
+
+
+            <p class="h7-re txt-color-16 mxt-2 ">
+              Địa chỉ kho: <span class="txt-color-71 ">448 Minh Khai, Vĩnh Tuy, Hai Bà Trưng, Hà Nội</span>
+            </p>
+            <p class="h7-re txt-color-16 mxt-2 ">
+              Miễn phí vận chuyển khi mua đơn hàng của nhả cung cấp trên 200.000đ
+            </p>            
+          </div>
+        </div>
+        
+        <div>
+          <div class="mxt-14 ">
+            <h1 class="h6-md ">Thông tin người đặt</h1>
+            <div class="flex-row flex-between_center mxt-6 ">
+              <input type="text" class="wx-248 pxl-16 box-size-border_box hx-40 border-1_solid_19 h5-re radius-4_4_4_4 mxr-8 " placeholder="Họ và tên">
+              <input type="text" class="wx-248 pxl-16 box-size-border_box hx-40 border-1_solid_19 h5-re radius-4_4_4_4 " placeholder="Điện thoại">
+            </div>
+          </div>
+
+          <div class="mxt-14 ">
+            <h1 class="h6-md ">Số lượng người dự kiến</h1>
+            <div class="flex-row flex-between_center mxt-6 ">
+              <input type="text" class="wx-248 pxl-16 box-size-border_box hx-40 border-1_solid_19 h5-re radius-4_4_4_4 mxr-8 " placeholder="Họ và tên">
+              <input type="text" class="wx-248 pxl-16 box-size-border_box hx-40 border-1_solid_19 h5-re radius-4_4_4_4 " placeholder="Điện thoại">
+            </div>
+          </div> 
+
+          <div class="mxt-14 ">
+            <h1 class="h6-md ">Địa điểm & Thời gian</h1>
+            <div class="mxt-6 ">
+              <input type="text" class="wx-100pc pxl-16 box-size-border_box hx-40 border-1_solid_19 h5-re radius-4_4_4_4 mxr-8 " placeholder="Họ và tên">
+              <div class="flex-row flex-between_center mxt-8 ">
+                <input type="text" class="wx-248 pxl-16 box-size-border_box hx-40 border-1_solid_19 h5-re radius-4_4_4_4 mxr-8 " placeholder="Họ và tên">
+                <input type="text" class="wx-248 pxl-16 box-size-border_box hx-40 border-1_solid_19 h5-re radius-4_4_4_4 " placeholder="Điện thoại">
+              </div>              
+            </div>
+          </div> 
+
+          <div class="mxt-14 ">
+            <h1 class="h6-md ">Yêu cầu khác</h1>
+            <input type="text" class="wx-100pc pxl-16 box-size-border_box mxt-6 hx-40 border-1_solid_19 h5-re radius-4_4_4_4 mxr-8 " placeholder="Họ và tên">
+          </div> 
+          
+          <button class="mxt-12 wx-248 hx-40 bg-5 radius-4_4_4_4 flex-col flex-center_center ">
+            <span class="txt-color-67 h5-bo ">Đặt chỗ ngay</span>
+          </button>
+        </div>
+
+        <div class="flex-row flex-start_center mxt-12 ">
+          <h1 class="wx-80 h6-re txt-color-16 text-align-left ">Số lượng</h1>
+
+          <div class="flex-row flex-start_center ">
+            <div class="hx-32 mxl-8 radius-4_4_4_4 border-1_solid_19 flex-row flex-between_center  ">
+              <button class="flex-col cursor-pointer flex-center_center ">
+                <span class="icon-left-24px fsx-24 txt-color-17 "></span>
+              </button>
+              <input type="text" placeholder="0" class="hx-100pc h6-re text-align-center wx-48 border-l_1_solid_19 border-r_1_solid_19 ">
+              <button class="flex-col cursor-pointer flex-center_center ">
+                <span class="icon-right-24px fsx-24 txt-color-17 "></span>
+              </button>
+            </div>    
+            <span class="mxl-12 h6-re ">(Chỉ còn 10 sản phẩm)</span>        
+          </div>
+        </div>      
+
+        <div class="flex-row flex-between_center mxt-12 ">
+          <button class="wx-248 hx-40 flex-row bg-5 radius-4_4_4_4 flex-center_center ">
+            <span class="h5-bo txt-color-67 ">Mua ngay</span>
+          </button>
+
+          <button class="wx-248 hx-40 flex-row bg-10 radius-4_4_4_4 flex-center_center ">
+            <span class="h5-bo txt-color-5 ">Thêm vào giỏ hàng</span>
+          </button>
+        </div> 
+
+        <div class="mxt-12">
+          <button class="wx-100pc hx-40 flex-row bg-5 radius-4_4_4_4 flex-center_center ">
+            <span class="h5-bo txt-color-67 ">Mua ngay</span>
+          </button>
+          <div class="flex-row flex-between_center mxt-8 ">
+            <button class="wx-248 hx-40 flex-row bg-10 radius-4_4_4_4 flex-center_center ">
+              <span class="h5-bo txt-color-5 ">Thêm vào giỏ hàng</span>
+            </button>   
+            <button class="wx-248 hx-40 flex-row bg-32 radius-4_4_4_4 flex-center_center ">
+              <span class="h5-bo txt-color-27 ">Trả góp 0%</span>
+            </button>        
+          </div>
+        </div>    
+
+        <div class="mxt-12 flex-row flex-between_center ">
+          <div class="flex-row flex-start_center ">
+            <div class="wx-32 hx-32 radius-circle bg-5 flex-col flex-center_center ">
+              <span class="icon-call-16px txt-color-67 fsx-16 "></span>
+            </div>
+            <p class="mxl-8 h6-re wx-208 ">
+              Gọi ngay <span class="h6-bo">19001901</span> (bấm phím 3) để được tư vấn mua hàng
+            </p>
+          </div>
+          <div class="flex-row flex-start_center ">
+            <div class="wx-32 hx-32 radius-circle bg-5 flex-col flex-center_center ">
+              <span class="icon-chat-16px txt-color-67 fsx-16 "></span>
+            </div>
+            <p class="mxl-8 h6-re wx-208 ">
+              Để lại số điện thoại để được tư vấn <br> <span class="txt-color-27 ">tại đây</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mxt-16 flex-row flex-between_center ">
+      <div class="wx-902 ">
+        <div class="bg-67 pxb-32 ">
+          <div class="hx-80 flex-row flex-start_center  bg-67 ">
+            <h1 class="mxl-32 hero-bo ">Đánh giá sản phẩm</h1>
+          </div> 
+          <div class="mx-auto wx-856 shadow-0_0_16_0_0_0_2  bg-67 ">
+
+            <div class="flex-row flex-between_start ">
+              <div class="wx-196 hx-216 flex-col flex-start_center ">
+                <h1 class="bg-bold mxt-24 ">4.8</h1>
+                <div class="flex row flex-start_center mxt-4 ">
+                  <span class="icon-star-16px fsx-24 txt-color-64 mxr-8 "></span>
+                  <span class="icon-star-16px fsx-24 txt-color-64 mxr-8 "></span>
+                  <span class="icon-star-16px fsx-24 txt-color-64 mxr-8 "></span>
+                  <span class="icon-star-16px fsx-24 txt-color-64 mxr-8 "></span>
+                  <span class="icon-star-16px fsx-24 txt-color-19 "></span>
+                </div>
+                <p class="txt-color-16 mxt-8 h6-re ">1.253 đánh giá mới</p>
+              </div>
+              <div class="wx-312 ">
+
+                <div class="flex-row flex-start_center mxl-16 hx-24 mxt-16 ">
+                  <span class="h7-re txt-color-16 ">5</span>
+                  <span class="icon-star-16px fsx-12 txt-color-16 mxl-4 "></span>
+                  <div class="wx-244 hx-6 bg-20 mxl-13 ">
+                    <div class="wx-50pc hx-100pc bg-5 "></div>
+                  </div>
+                </div>
+
+                <div class="flex-row flex-start_center mxl-16 hx-24 ">
+                  <span class="h7-re txt-color-16 ">5</span>
+                  <span class="icon-star-16px fsx-12 txt-color-16 mxl-4 "></span>
+                  <div class="wx-244 hx-6 bg-20 mxl-13 ">
+                    <div class="wx-50pc hx-100pc bg-5 "></div>
+                  </div>
+                </div>
+
+                <div class="flex-row flex-start_center mxl-16 hx-24 ">
+                  <span class="h7-re txt-color-16 ">5</span>
+                  <span class="icon-star-16px fsx-12 txt-color-16 mxl-4 "></span>
+                  <div class="wx-244 hx-6 bg-20 mxl-13 ">
+                    <div class="wx-50pc hx-100pc bg-5 "></div>
+                  </div>
+                </div>
+
+                <div class="flex-row flex-start_center mxl-16 hx-24 ">
+                  <span class="h7-re txt-color-16 ">5</span>
+                  <span class="icon-star-16px fsx-12 txt-color-16 mxl-4 "></span>
+                  <div class="wx-244 hx-6 bg-20 mxl-13 ">
+                    <div class="wx-50pc hx-100pc bg-5 "></div>
+                  </div>
+                </div>
+
+                <div class="flex-row flex-start_center mxl-16 hx-24 ">
+                  <span class="h7-re txt-color-16 ">5</span>
+                  <span class="icon-star-16px fsx-12 txt-color-16 mxl-4 "></span>
+                  <div class="wx-244 hx-6 bg-20 mxl-13 ">
+                    <div class="wx-50pc hx-100pc bg-5 "></div>
+                  </div>
+                </div>
+                
+
+                <ul class="wrap flex-row mxl-16 ">
+                  <li>
+                    <div class="hx-24 radius-4_4_4_4 border-1_solid_5 flex-col flex-center_center mxr-8 p-rel mxb-10 ">
+                      <span class="h6-re pxl-12 pxr-12 txt-colỏ-5 ">Tất cả</span>
+                      <span class="icon-selected-checked p-abs rightx-0 topx-0 ">
+                        <span class="path1"></span><span class="path2"></span>
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="hx-24 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center mxr-8 mxb-10 ">
+                      <span class="h6-re pxl-12 pxr-12 ">5 Sao (680)</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="hx-24 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center mxr-8 mxb-10 ">
+                      <span class="h6-re pxl-12 pxr-12 ">4 Sao (80)</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="hx-24 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center mxr-8 mxb-10 ">
+                      <span class="h6-re pxl-12 pxr-12 ">3 Sao (128)</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="hx-24 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center mxr-8 mxb-10 ">
+                      <span class="h6-re pxl-12 pxr-12 ">2 Sao (62)</span>
+                    </div>
+                  </li>      
+                  <li>
+                    <div class="hx-24 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center mxr-8 mxb-10 ">
+                      <span class="h6-re pxl-12 pxr-12 ">1 Sao (32)</span>
+                    </div>
+                  </li>         
+                </ul>
+              </div>
+              <div class="wx-348 ">
+                <h1 class="h5-bo mxt-16 mxl-16 ">Viết đánh giá sản phẩm</h1>
+                <div class="mxl-16 mxt-10 flex-row flex-start_center ">
+                  <ul class="flex-row flex-start_center txt-color-16 ">
+                    <li>
+                      <span class="icon-star-16px fsx-20 mxr-6 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-20 mxr-6 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-20 mxr-6 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-20 mxr-6 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-20 mxr-6 "></span>
+                    </li>
+                  </ul>
+                  <span class="h7-re txt-color-16 ">Chọn sao để đánh giá</span>
+                </div>
+                <textarea name="" placeholder="Mời bạn viết đánh giá về sản phẩm này, vui lòng viết tiếng Việt có dấu....." class="mxl-16 wx-316 hx-84 mxt-8 radius-4_4_4_4 box-size-border_box border-1_solid_19 pxt-8 pxl-16 "></textarea>
+                
+                <div class="mxl-16 flex-row flex-between_center mxt-8 ">
+                  <span class="h6-re txt-color-16 ">0/500 ký tự</span>
+                  <button class="radius-4_4_4_4 bg-5 flex-row flex-center_center hx-32 mxr-16 pxl-25 pxr-25 ">
+                    <span class="h6-bo txt-color-67 ">Gửi đánh giá</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex-row flex-start_start mxt-16  bg-67 ">
+            <div class="wx-48 mxl-32 hx-48 radius-circle bg-68 flex-col flex-center_center ">
+              <span class="h4-bo txt-color-39 ">TK</span>
+            </div>
+            <div class="wx-792 ">
+              <div class="wx-100pc box-size-border_box bg-21 wx-792 radius-4_4_4_4 mxl-16 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                <h1 class="h5-bo ">Trần Tuấn Kiệt</h1>
+                <div class="flex-row flex-start_center mxt-2 ">
+                  <ul class="flex-row flex-start_center ">
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-18 mxr-2 "></span>
+                    </li>
+                  </ul>
+                  <span class="mxl-8 txt-color-16 h7-re ">13.10.2018 22:41</span>
+                </div>
+                <p class="h5-re mxt-5 ">
+                  Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+              </div>    
+              
+              <div class="mxt-12 mxl-16 wx-100pc flex-row flex-start_start ">
+                <div class="wx-32 hx-32 radius-circle bg-10 flex-col flex-center_center ">
+                  <span class="fsx-23 icon-adayroi-24px txt-color-5 "></span>
+                </div>
+
+                <div class="mxl-16 wx-744 bg-21 box-size-border_box radius-4_4_4_4 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                  <h1 class="h5-bo ">Quản trị Viên</h1>
+                  <span class="txt-color-16 h7-re mxt-2 ">13.10.2018 22:41</span>
+                  <p class="h5-re ">
+                    Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-row flex-start_start mxt-16  bg-67 ">
+            <div class="wx-48 mxl-32 hx-48 radius-circle bg-68 flex-col flex-center_center ">
+              <span class="h4-bo txt-color-39 ">TK</span>
+            </div>
+            <div class="wx-792 ">
+              <div class="wx-100pc box-size-border_box bg-21 wx-792 radius-4_4_4_4 mxl-16 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                <h1 class="h5-bo ">Trần Tuấn Kiệt</h1>
+                <div class="flex-row flex-start_center mxt-2 ">
+                  <ul class="flex-row flex-start_center ">
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-18 mxr-2 "></span>
+                    </li>
+                  </ul>
+                  <span class="mxl-8 txt-color-16 h7-re ">13.10.2018 22:41</span>
+                </div>
+                <p class="h5-re mxt-5 ">
+                  Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+              </div>    
+              
+              <div class="mxt-12 mxl-16 wx-100pc flex-row flex-start_start ">
+                <div class="wx-32 hx-32 radius-circle bg-10 flex-col flex-center_center ">
+                  <span class="fsx-23 icon-adayroi-24px txt-color-5 "></span>
+                </div>
+
+                <div class="mxl-16 wx-744 bg-21 box-size-border_box radius-4_4_4_4 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                  <h1 class="h5-bo ">Quản trị Viên</h1>
+                  <span class="txt-color-16 h7-re mxt-2 ">13.10.2018 22:41</span>
+                  <p class="h5-re ">
+                    Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-row flex-start_start mxt-16  bg-67 ">
+            <div class="wx-48 mxl-32 hx-48 radius-circle bg-68 flex-col flex-center_center ">
+              <span class="h4-bo txt-color-39 ">TK</span>
+            </div>
+            <div class="wx-792 ">
+              <div class="wx-100pc box-size-border_box bg-21 wx-792 radius-4_4_4_4 mxl-16 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                <h1 class="h5-bo ">Trần Tuấn Kiệt</h1>
+                <div class="flex-row flex-start_center mxt-2 ">
+                  <ul class="flex-row flex-start_center ">
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-18 mxr-2 "></span>
+                    </li>
+                  </ul>
+                  <span class="mxl-8 txt-color-16 h7-re ">13.10.2018 22:41</span>
+                </div>
+                <p class="h5-re mxt-5 ">
+                  Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+              </div>    
+              
+              <div class="mxt-12 mxl-16 wx-100pc flex-row flex-start_start ">
+                <div class="wx-32 hx-32 radius-circle bg-10 flex-col flex-center_center ">
+                  <span class="fsx-23 icon-adayroi-24px txt-color-5 "></span>
+                </div>
+
+                <div class="mxl-16 wx-744 bg-21 box-size-border_box radius-4_4_4_4 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                  <h1 class="h5-bo ">Quản trị Viên</h1>
+                  <span class="txt-color-16 h7-re mxt-2 ">13.10.2018 22:41</span>
+                  <p class="h5-re ">
+                    Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-row flex-start_start mxt-16  bg-67 ">
+            <div class="wx-48 mxl-32 hx-48 radius-circle bg-68 flex-col flex-center_center ">
+              <span class="h4-bo txt-color-39 ">TK</span>
+            </div>
+            <div class="wx-792 ">
+              <div class="wx-100pc box-size-border_box bg-21 wx-792 radius-4_4_4_4 mxl-16 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                <h1 class="h5-bo ">Trần Tuấn Kiệt</h1>
+                <div class="flex-row flex-start_center mxt-2 ">
+                  <ul class="flex-row flex-start_center ">
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-64 mxr-2 "></span>
+                    </li>
+                    <li>
+                      <span class="icon-star-16px fsx-12 txt-color-18 mxr-2 "></span>
+                    </li>
+                  </ul>
+                  <span class="mxl-8 txt-color-16 h7-re ">13.10.2018 22:41</span>
+                </div>
+                <p class="h5-re mxt-5 ">
+                  Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+              </div>    
+              
+              <div class="mxt-12 mxl-16 wx-100pc flex-row flex-start_start ">
+                <div class="wx-32 hx-32 radius-circle bg-10 flex-col flex-center_center ">
+                  <span class="fsx-23 icon-adayroi-24px txt-color-5 "></span>
+                </div>
+
+                <div class="mxl-16 wx-744 bg-21 box-size-border_box radius-4_4_4_4 pxl-16 pxt-8 pxr-16 pxb-8 ">
+                  <h1 class="h5-bo ">Quản trị Viên</h1>
+                  <span class="txt-color-16 h7-re mxt-2 ">13.10.2018 22:41</span>
+                  <p class="h5-re ">
+                    Tuyệt vời chất lượng khỏi nói phù hợp với sinh viên như em với nhiều sinh viên khác, nhiều tác dụng hữu ích phù hợp nhiều mục đích khác nhau.
+                </p>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          <div class="flex-row flex-end_center pxt-10 pxr-16 bg-67 ">
+            <button class="wx-32 hx-32 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center ">
+              <span class="icon-left-24px fsx-24 "></span>
+            </button>
+            <ul class="mxl-8 mxr-8 flex-row flex-start_center ">
+              <li>
+                <button class="wx-32 mxr-8 hx-32 radius-4_4_4_4 border-1_solid_5 bg-5 flex-col flex-center_center ">
+                  <span class="h5-bo txt-color-67 ">1</span>
+                </button>   
+              </li>
+              <li>
+                <button class="wx-32 mxr-8 hx-32 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center ">
+                  <span class="h5-bo ">2</span>
+                </button>   
+              </li>
+              <li>
+                <button class="wx-32 mxr-8 hx-32 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center ">
+                  <span class="h5-bo ">3</span>
+                </button>   
+              </li> 
+              <li>
+                <button class="wx-32 mxr-8 hx-32 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center ">
+                  <span class="h5-bo ">4</span>
+                </button>   
+              </li>
+              <li>
+                <button class="wx-32 mxr-8 hx-32 flex-col flex-center_center ">
+                  <span class="icon-more-vertical-24px fsx-24 txt-color-17 "></span>
+                </button>   
+              </li>
+              <li>
+                <button class="wx-32 hx-32 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center ">
+                  <span class="h5-bo ">5</span>
+                </button>   
+              </li>
+            </ul>
+            <button class="wx-32 hx-32 radius-4_4_4_4 border-1_solid_20 flex-col flex-center_center ">
+              <span class="icon-right-24px fsx-24 "></span>
+            </button>
+          </div> 
+
+        </div>
+
+
+
+
+        <div class="hx-446 bg-67 mxt-16 ">
+          <div class="hx-80 flex-row flex-start_center ">
+            <h1 class="hero-bo mxl-32 ">Sản phẩm tương tự</h1>
+          </div>
+
+          <ngx-slick-carousel 
+            class="carousel " 
+            #slickModal="slick-carousel" 
+            [config]="slideConfig1">
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>      
+            <div ngxSlickItem class="slide">
+              <div class="wx-210 hx-350 ">
+                <div class="hx-210 flex-col flex-end_center ">
+                  <div class="wx-194 hx-194 bg-cover p-rel "
+                       style="background-image: url(https://i.ibb.co/LpFV9zL/image.png);">
+                  </div>
+                </div>
+                <div class="p-rel ">
+                  <p class="p-abs topx-8 leftx-12 wx-186 hx-40 h6-re overflow-hidden ">
+                    Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập kh...
+                  </p>
+                  <div class="hx-22 wx-186 p-abs leftx-12 topx-50 flex-row flex-start_center ">
+                    <h1 class="h5-bo txt-color-5 ">300.000đ</h1>
+                    <h2 class="mxl-4 h5-re txt-color-16 txt-deco-line_through ">600.000đ</h2>
+                    <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                      <span class="h6-bo txt-color-67 ">-30%</span>
+                    </div>
+                  </div>
+                  <div class="hx-16 wx-317 p-abs topx-72 leftx-12 flex-row flex-start_center ">
+                      <ul class="flex-row flex-start_center">
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-64 mxl-2 "></span>
+                          </li>
+                          <li>
+                              <span class="icon-star-16px fsx-16 txt-color-18 mxl-2 "></span>
+                          </li>
+                      </ul>
+                      <span class="h7-re txt-color-16 mxl-2 ">(25)</span>
+                  </div>
+
+                  <div class="hx-24 wx-232 p-abs topx-112 leftx-12 flex-row flex-start_center ">
+                      <div class="flex-row flex-start_center radius-4_4_4_4 bg-21 pxl-8 pxr-8 pxt-6 pxb-6 display-inline_flex ">
+                          <span class="icon-VinID txt-color-5 "></span>
+                          <span class="mxl-4 h7-re ">Hoàn</span>
+                          <span class="mxl-4 h7-md weight-500 ">5.000.000đ</span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-4 ">
+                          <span class="txt-color-5 icon-giftcode-16px"></span>
+                      </div>
+
+                      <div class="wx-24 hx-24 radius-circle bg-10 flex-col flex-center_center p-rel leftx-8 ">
+                          <span class="txt-color-5 icon-gift-16px"></span>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+          </ngx-slick-carousel>
+        </div>
+        
+      </div>
+      <div class="wx-296 ">
+        <div class="hx-48 flex-row flex-start_center bg-67 ">
+          <span class="pxl-16 h4-md ">Chính sách Adayroi</span>
+        </div>
+        <div class="mxt-1 bg-67 ">
+          <div class="flex-row flex-start_start pxt-10 mxl-16 ">
+            <span class="icon-vingroup-16px fsx-16 "></span>
+            <span class="mxl-16 h6-re p-rel topx-m5 pxr-45 ">Sản phẩm không áp dụng tiêu điẻm VinID</span>
+          </div>
+          <div class="flex-row flex-start_start mxt-8 mxl-16 ">
+            <span class="icon-box-16px fsx-16 "></span>
+            <span class="mxl-16 h6-re p-rel topx-m5 pxr-45 ">
+              Miễn phí công lắp đặt bởi Adayroi. Khách hàng vui lòng thanh toán chi phí vật tư phát sinh
+            </span>
+          </div>
+          <div class="flex-row flex-start_start mxt-8 mxl-16 ">
+            <span class="icon-return-16px fsx-16 "></span>
+            <span class="mxl-16 h6-re p-rel topx-m5 pxr-45 ">
+              Chính sách đổi trả thủ tục đơn giản
+              <br>
+              <span class="txt-color-27 ">Chi tiết</span>
+            </span>
+          </div>
+          <div class="flex-row flex-start_start mxt-8 mxl-16 ">
+            <span class="icon-file-16px fsx-16 "></span>
+            <span class="mxl-16 h6-re p-rel topx-m5 pxr-45 ">
+              Nhà cung cấp xuất hóa đơn cho sản phẩm
+            </span>
+          </div>
+        </div>
+
+        <div class="hx-48 flex-row flex-start_center bg-67 mxt-6 ">
+          <span class="pxl-16 h4-md ">Dành riêng cho bạn</span>
+        </div>
+
+        <div class="mxt-1 flex-row flex-start_start bg-67 ">
+          <div class="wx-72 hx-72 bg-cover mxt-12 mxl-16 " style="background-image: url(https://i.ibb.co/Bfbn1Zw/Vertical.png);"></div>
+          <div class="mxl-12 wx-180 mxt-12 ">
+            <h1 class="h6-re ">
+              Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập k...
+            </h1>
+            <div class="mxt-2 flex-row flex-start_center ">
+              <h1 class="txt-color-5 h5-bo ">500.000đ</h1>
+              <h2 class="h5-re txt-color-16 txt-deco-line_through mxl-4 ">600.00đ</h2>
+
+              <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                <span class="h6-bo txt-color-67 ">-30%</span>
+              </div>
+            </div>
+
+            <div class="flex-row flex-start_center p-rel effect-4 ">
+              <div class="flex-row flex-start_center ">
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-18 mxr-2 fsx-12 "></span>
+              </div>
+              <span class="h7-re txt-color-16 mxl-6 ">(25)</span>
+            </div> 
+
+            <div class="mxt-4 flex-row flex-start_center ">
+              <span class="icon-vinid-special fsx-12 txt-color-5"></span>
+              <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mxt-1 flex-row flex-start_start bg-67 ">
+          <div class="wx-72 hx-72 bg-cover mxt-12 mxl-16 " style="background-image: url(https://i.ibb.co/Bfbn1Zw/Vertical.png);"></div>
+          <div class="mxl-12 wx-180 mxt-12 ">
+            <h1 class="h6-re ">
+              Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập k...
+            </h1>
+            <div class="mxt-2 flex-row flex-start_center ">
+              <h1 class="txt-color-5 h5-bo ">500.000đ</h1>
+              <h2 class="h5-re txt-color-16 txt-deco-line_through mxl-4 ">600.00đ</h2>
+
+              <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                <span class="h6-bo txt-color-67 ">-30%</span>
+              </div>
+            </div>
+
+            <div class="flex-row flex-start_center p-rel effect-4 ">
+              <div class="flex-row flex-start_center ">
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-18 mxr-2 fsx-12 "></span>
+              </div>
+                <span class="h6-bo txt-color-67 ">-30%</span>
+            </div> 
+
+            <div class="mxt-4 flex-row flex-start_center ">
+              <span class="icon-vinid-special fsx-12 txt-color-5"></span>
+              <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mxt-1 flex-row flex-start_start bg-67 ">
+          <div class="wx-72 hx-72 bg-cover mxt-12 mxl-16 " style="background-image: url(https://i.ibb.co/Bfbn1Zw/Vertical.png);"></div>
+          <div class="mxl-12 wx-180 mxt-12 ">
+            <h1 class="h6-re ">
+              Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập k...
+            </h1>
+            <div class="mxt-2 flex-row flex-start_center ">
+              <h1 class="txt-color-5 h5-bo ">500.000đ</h1>
+              <h2 class="h5-re txt-color-16 txt-deco-line_through mxl-4 ">600.00đ</h2>
+
+              <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                <span class="h6-bo txt-color-67 ">-30%</span>
+              </div>
+            </div>
+
+            <div class="flex-row flex-start_center p-rel effect-4 ">
+              <div class="flex-row flex-start_center ">
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-18 mxr-2 fsx-12 "></span>
+              </div>
+              <span class="h7-re txt-color-16 mxl-6 ">(25)</span>
+            </div> 
+
+            <div class="mxt-4 flex-row flex-start_center ">
+              <span class="icon-vinid-special fsx-12 txt-color-5"></span>
+              <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mxt-1 flex-row flex-start_start bg-67 ">
+          <div class="wx-72 hx-72 bg-cover mxt-12 mxl-16 " style="background-image: url(https://i.ibb.co/Bfbn1Zw/Vertical.png);"></div>
+          <div class="mxl-12 wx-180 mxt-12 ">
+            <h1 class="h6-re ">
+              Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập k...
+            </h1>
+            <div class="mxt-2 flex-row flex-start_center ">
+              <h1 class="txt-color-5 h5-bo ">500.000đ</h1>
+              <h2 class="h5-re txt-color-16 txt-deco-line_through mxl-4 ">600.00đ</h2>
+
+              <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                <span class="h6-bo txt-color-67 ">-30%</span>
+              </div>
+            </div>
+
+            <div class="flex-row flex-start_center p-rel effect-4 ">
+              <div class="flex-row flex-start_center ">
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-18 mxr-2 fsx-12 "></span>
+              </div>
+              <span class="h7-re txt-color-16 mxl-6 ">(25)</span>
+            </div> 
+
+            <div class="mxt-4 flex-row flex-start_center ">
+              <span class="icon-vinid-special fsx-12 txt-color-5"></span>
+              <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mxt-1 flex-row flex-start_start bg-67 ">
+          <div class="wx-72 hx-72 bg-cover mxt-12 mxl-16 " style="background-image: url(https://i.ibb.co/Bfbn1Zw/Vertical.png);"></div>
+          <div class="mxl-12 wx-180 mxt-12 ">
+            <h1 class="h6-re ">
+              Điện Thoại iPhone XS Max 64GB (2 Sim Vật Lý) - Nhập k...
+            </h1>
+            <div class="mxt-2 flex-row flex-start_center ">
+              <h1 class="txt-color-5 h5-bo ">500.000đ</h1>
+              <h2 class="h5-re txt-color-16 txt-deco-line_through mxl-4 ">600.00đ</h2>
+
+              <div class="flex-row hx-16 flex-center_center bg-5 radius-4_4_4_4 pxl-8 pxr-4 mxl-4 ">
+                <span class="h6-bo txt-color-67 ">-30%</span>
+              </div>
+            </div>
+
+            <div class="flex-row flex-start_center p-rel effect-4 ">
+              <div class="flex-row flex-start_center ">
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-64 mxr-2 fsx-12 "></span>
+                <span class="icon-star-16px txt-color-18 mxr-2 fsx-12 "></span>
+              </div>
+              <span class="h7-re txt-color-16 mxl-6 ">(25)</span>
+            </div> 
+
+            <div class="mxt-4 flex-row flex-start_center ">
+              <span class="icon-vinid-special fsx-12 txt-color-5"></span>
+              <p class="mxl-4 h7-re ">Hoàn <span class="h7-bo ">1.004.000đ (5%)</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

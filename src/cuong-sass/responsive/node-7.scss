@@ -1,0 +1,28 @@
+.node-7 {
+	width: 100vw;
+	height: calc(100vw * 348 / 360);
+
+	.n7-1 {
+		width: calc(100vw * 176 / 360);
+		height: calc(100vw * 176 / 360);
+	}
+
+	.n7-2 {
+		font-size: calc(100vw * 14 / 360);
+		line-height: calc(100vw * 22 / 360);
+		margin-top: calc(100vw * 12 / 360);
+		width: calc(100vw * 296 / 360);
+	}
+
+	.n7-3 {
+		border: calc(100vw * 1 / 360) solid $color-20;
+		width: calc(100vw * 296 / 360);
+		height: calc(100vw * 50 / 360);		
+
+		margin-top: calc(100vw * 12 / 360);		
+		span {
+			font-size: calc(100vw * 14 / 360);
+			line-height: calc(100vw * 22 / 360);
+		}
+	}
+}

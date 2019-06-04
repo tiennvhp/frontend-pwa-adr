@@ -1,0 +1,233 @@
+.node-5 {
+	.n5-1 {
+		height: calc(100vw * 48 / 360);
+	}
+	
+	.n5-2 {
+		width: calc(100vw * 156 / 360);
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: calc(100vw * 1 / 360);
+			height: calc(100vw * 24 / 360);
+			background: $color-21;
+		}
+	}
+
+	.n5-3 {
+		height: calc(100vw * 48 / 360);
+		overflow-y: auto; 
+	}
+
+	.n5-4 {
+		width: calc(100vw * 48 / 360);
+		height: calc(100vw * 48 / 360);
+	}
+
+	.n5-5  {
+		font-size: calc(100vw * 24 / 360);
+	}
+
+	.n5-6 {
+		margin-left: calc(100vw * 8 / 360);
+		font-size: calc(100vw * 14 / 360);
+	}
+
+	.n5-7 {
+		height: calc(100vw * 32 / 360);
+		border: calc(100vw * 1 / 360) solid $color-20;
+		padding-left: calc(100vw * 16 / 360);
+		padding-right: calc(100vw * 16 / 360);
+		margin-right: calc(100vw * 8 / 360);
+		min-width: calc(100vw * 126 / 360);
+
+		span {
+			font-size: calc(100vw * 13 / 360);
+		}
+	}
+	.n5-8 {
+		width: calc(100vw * 178 / 360);
+	}
+
+	.n5-9 {
+		margin-left: calc(100vw * 9 / 360);
+		margin-bottom: calc(100vw * 4 / 360);
+		padding-bottom: calc(100vw * 8 / 360);
+	}
+
+	.n5-10 {
+		margin-right: calc(100vw * 9 / 360);
+		margin-bottom: calc(100vw * 4 / 360);
+		padding-bottom: calc(100vw * 8 / 360);
+	}
+
+	.n5-11 {
+		height: calc(100vw * 166 / 360);
+	}
+
+	.n5-12 {
+		width: calc(100vw * 32 / 360);
+		height: calc(100vw * 32 / 360);
+		top: calc(100vw * 8 / 360);
+		left: calc(100vw * 8 / 360);
+	}
+
+	.n5-13 {
+		width: calc(100vw * 32 / 360);
+		height: calc(100vw * 32 / 360);
+		top: calc(100vw * 8 / 360);
+		right: calc(100vw * 8 / 360);
+	}
+
+	.n5-14 {
+		width: calc(100vw * 164 / 360);
+		height: calc(100vw * 29 / 360);
+		bottom: 0px;
+		right: 0px;
+	}
+
+	.n5-15 {
+		width: calc(100vw * 158 / 360);
+	}
+
+	.n5-16 {
+		margin-top: calc(100vw * 4 / 360);
+		font-size: calc(100vw * 13 / 360);
+		line-height: calc(100vw * 20 / 360);
+	}
+
+	.n5-17 {
+		font-size: calc(100vw * 12 / 360);
+	}
+
+	.n5-18 {
+		font-size: calc(100vw * 12 / 360);
+	}
+
+	.n5-19 {
+		height: calc(100vw * 14 / 360);
+		border-radius: 3px;
+		margin-left: calc(100vw * 4 / 360);
+
+		span {
+			font-size: calc(100vw * 11 / 360);
+			color: white;
+			padding-left: calc(100vw * 4 / 360);
+			padding-right: calc(100vw * 4 / 360);
+		}
+	}
+
+	.n5-20 {
+		margin-top: calc(100vw * 2 / 360);
+	}
+
+	.n5-21 {
+		margin-right: calc(100vw * 2 / 360);
+		font-size: calc(100vw * 10 / 360);
+	}
+
+	.n5-22 {
+		margin-top: calc(100vw * 4 / 360);
+		font-size: calc(100vw * 12 / 360);
+	}
+
+	.n5-23 {
+		margin-top: calc(100vw * 4 / 360);
+		height: calc(100vw * 20 / 360);
+		display: inline-flex;
+		padding-right: calc(100vw * 4 / 360);
+		padding-left: calc(100vw * 4 / 360);
+	}
+
+	.n5-24 {
+		font-size: calc(100vw * 12 / 360);
+		margin-left: calc(100vw * 6 / 360);
+	}
+
+	.n5-25 {
+		font-size: calc(100vw * 12 / 360);
+		margin-left: calc(100vw * 2 / 360);
+	}
+
+	.n5-26 {
+		font-size: calc(100vw * 12 / 360);
+	}	
+
+	.n5-27 {
+		margin-top: calc(100vw * 2 / 360);
+	}
+
+	.n5-28 {
+		width: calc(100vw * 328 / 360);
+		height: calc(100vw * 40 / 360);
+	}
+
+	.n5-29 {
+		font-size: calc(100vw * 14 / 360);
+	}
+
+	.n5-30 {
+		height: calc(100vw * 56 / 360);
+	}
+
+	.n5-31 {
+		padding-top: calc(100vw * 12 / 360);
+		padding-left: calc(100vw * 16 / 360);
+		padding-bottom: calc(100vw * 12 / 360);
+	}
+
+	.n5-32 {
+		width: calc(100vw * 88 / 360);
+		height: calc(100vw * 88 / 360);
+	}
+
+	.n5-33 {
+		width: calc(100vw * 228 / 360);
+		margin-left: calc(100vw * 12 / 360);
+		
+	}
+
+	.n5-34 {
+		width: calc(100vw * 20 / 360);
+		height: calc(100vw * 20 / 360);
+	}
+
+	.n5-35 {
+		width: calc(100vw * 20 / 360);
+		height: calc(100vw * 20 / 360);		
+	}
+
+	.n5-36 {
+		width: calc(100vw * 88 / 360);
+		height: calc(100vw * 15 / 360);		
+	}
+
+	.n5-37 {
+		font-size: calc(100vw * 13 / 360);
+		line-height: calc(100vw * 20 / 360);
+	}
+
+	.n5-38 {
+		font-size: calc(100vw * 13 / 360);
+		// margin-left: calc(100vw * 4 / 360);
+	}
+
+	.n5-39 {
+		height: calc(100vw * 14 / 360);		
+		padding-left: calc(100vw * 4 / 360);		
+		padding-right: calc(100vw * 4 / 360);		
+		margin-left: calc(100vw * 4 / 360);
+		span {
+			font-size: calc(100vw * 11 / 360);
+		}
+	}
+
+	.n5-40 {
+		margin-top: calc(100vw * 4 / 360);
+	}
+	
+}

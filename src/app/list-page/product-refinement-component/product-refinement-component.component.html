@@ -1,0 +1,189 @@
+        <div>
+          <div [ngClass]="{'effect-11': isNarrowingBrandList}" >
+            <div (click)="narrowBrandList()" class="hx-40 flex-row flex-between_center cursor-pointer ">
+              <h1 class="h5-bo txt-color-71 mxl-12 ">Thương hiệu</h1>
+              <span 
+                
+                [className]="isNarrowingBrandList ? 'icon-increase-24px fsx-24 mxr-8 txt-color-17 ' : 'icon-decrease-24px fsx-24 mxr-8 txt-color-17 '"
+              ></span>
+            </div>
+
+                 
+            <div class="hx-40 flex-col flex-center_center p-rel ">
+              <span class="p-abs leftx-16 icon-search-tiny-24px fsx-24 txt-color-17 "></span>
+              <input type="text" placeholder="Search" class="pxl-33 box-size-border_box h6-re wx-184 hx-32 radius-4_4_4_4 border-1_solid_19 ">
+            </div>
+
+            <ul class="mxt-4 ">
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id1" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id1" class="h6-re txt-color-71 mxl-8 cursor-pointer ">Asanzo (3)</label>
+                </div>              
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id2" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id2" class="h6-re txt-color-71 mxl-8 cursor-pointer ">Asus (40)</label>
+                </div>
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id3" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id3" class="h6-re txt-color-71 mxl-8 cursor-pointer ">BlackBerry (40)</label>
+                </div>
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id4" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id4" class="h6-re txt-color-71 mxl-8 cursor-pointer ">ThinkPad (40)</label>
+                </div>    
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id5" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id5" class="h6-re txt-color-71 mxl-8 cursor-pointer ">Huawei (40)</label>
+                </div> 
+              </li>
+            </ul>
+
+            <div class="flex-row flex-start_center ">
+              <span class="pxt-6 pxb-6 h6-re txt-color-26 pxl-12 cursor-pointer ">Xem thêm</span>
+            </div>  
+          </div>
+
+          <div [ngClass]="{'effect-11': isNarrowingPriceList}" >
+            <div (click)="narrowPriceList()" class="hx-40 flex-row flex-between_center cursor-pointer ">
+              <h1 class="h5-bo txt-color-71 mxl-12 ">Giá sản phẩm</h1>
+              <span 
+                
+                [className]="isNarrowingPriceList ? 'icon-increase-24px fsx-24 mxr-8 txt-color-17 ' : 'icon-decrease-24px fsx-24 mxr-8 txt-color-17 '"
+              ></span>
+            </div>
+            <ul>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id1" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id1" class="h6-re txt-color-71 mxl-8 cursor-pointer ">≤ 50.000đ (2.798)</label>
+                </div>              
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id2" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id2" class="h6-re txt-color-71 mxl-8 cursor-pointer ">50.000 - 200.000đ (4)</label>
+                </div>
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id3" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id3" class="h6-re txt-color-71 mxl-8 cursor-pointer ">200.000 - 500.000đ (4)</label>
+                </div>
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id4" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id4" class="h6-re txt-color-71 mxl-8 cursor-pointer ">500.000 - 1.000.000đ (2)</label>
+                </div>    
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 ">
+                  <input type="checkbox" id="checkbox_id5" name="vehicle1" value="Bike" class="cursor-pointer p-abs leftx-10 topx-1 zindex-2 ">
+                  <span class="icon-checkbox-24px txt-color-19 mxl-12 e-41  "></span>
+                  <span class="icon-check-16px txt-color-67 e-42 p-abs leftx-12 "></span>
+                  <label for="checkbox_id5" class="h6-re txt-color-71 mxl-8 cursor-pointer ">≥ 1.000.000đ (1)</label>
+                </div> 
+              </li>
+            </ul>
+          </div>
+
+          <div [ngClass]="{'effect-11': isNarrowingReviewList}" >
+            <div (click)="narrowReviewList()" class="hx-40 flex-row flex-between_center cursor-pointer ">
+              <h1 class="h5-bo txt-color-71 mxl-12 ">Đánh giá</h1>
+              <span 
+                [className]="isNarrowingReviewList ? 'icon-increase-24px fsx-24 mxr-8 txt-color-17 ' : 'icon-decrease-24px fsx-24 mxr-8 txt-color-17'"
+              ></span>
+            </div>
+            <ul>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 mxl-12 ">
+                  <div class="flex-row flex-start_center ">
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                  </div>
+                  <span class="h6-re txt-color-71 mxl-6 ">4 sao trở lên (12)</span>
+                </div>              
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 mxl-12 ">
+                  <div class="flex-row flex-start_center ">
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                  </div>
+                  <span class="h6-re txt-color-71 mxl-6 ">3 sao trở lên (12)</span>
+                </div>              
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 mxl-12 ">
+                  <div class="flex-row flex-start_center ">
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                  </div>
+                  <span class="h6-re txt-color-71 mxl-6 ">2 sao trở lên (12)</span>
+                </div>              
+              </li>
+              <li>
+                <div class="flex-row flex-start_center p-rel effect-4 hx-32 mxl-12 ">
+                  <div class="flex-row flex-start_center ">
+                    <span class="icon-star-16px txt-color-64 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                    <span class="icon-star-16px txt-color-18 mxr-2 fsx-10 "></span>
+                  </div>
+                  <span class="h6-re txt-color-71 mxl-6 ">1 sao trở lên (12)</span>
+                </div>              
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="hx-40 flex-row flex-between_center ">
+              <h1 class="h5-bo txt-color-71 mxl-12 ">Kích thước màn hình</h1>
+              <span class="icon-increase-24px fsx-24 mxr-8 txt-color-17 cursor-pointer "></span>
+            </div>
+          </div>
+            
+          <div>
+            <div class="hx-40 flex-row flex-between_center ">
+              <h1 class="h5-bo txt-color-71 mxl-12 ">Dung lượng</h1>
+              <span class="icon-increase-24px fsx-24 mxr-8 txt-color-17 cursor-pointer "></span>
+            </div>
+          </div>          
+        </div>

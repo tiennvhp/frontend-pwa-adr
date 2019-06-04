@@ -1,0 +1,14 @@
+.node2 {
+	width: 100vw;
+	height: calc(100vw * 76 / 360); 
+	overflow-y: auto; 
+
+	.n2-1 {
+		width: calc(100vw * 90 / 360);
+	}
+
+	.n2-2 {
+		width: calc(100vw * 60 / 360);
+		height: calc(100vw * 60 / 360);
+	}
+}

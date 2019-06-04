@@ -1,0 +1,126 @@
+.node-6 {
+	width: 100vw;
+
+	.n6-1 {
+		width: 100%;
+		height: calc(100vw * 48 / 360);
+	}
+
+	.n6-2 {
+		font-size: calc(100vw * 15 / 360);
+	}
+
+	.n6-3 {
+		font-size: calc(100vw * 13 / 360);
+	}
+
+	.n6-4 {
+		font-size: calc(100vw * 24 / 360);
+	}
+
+	.n6-5 {
+		overflow-y: auto;
+		width: 100%;
+		height: calc(100vw * 268 / 360);
+	}
+
+	.n6-6 {
+		width: calc(100vw * 152 / 360);
+		height: calc(100vw * 252 / 360);
+		border: 1px solid $color-21;
+		margin-right: calc(100vw * 8 / 360);
+	}
+
+	.n6-7 {
+		height: calc(100vw * 136 / 360);
+	}
+
+	.n6-8 {
+		width: calc(100vw * 128 / 360);
+		height: calc(100vw * 128 / 360);
+	}
+
+	.n6-9 {
+		width: calc(100vw * 32 / 360);
+		height: calc(100vw * 32 / 360);
+		top: calc(100vw * 8 / 360);
+		left: calc(100vw * 8 / 360);
+	}
+
+	.n6-10 {
+		width: calc(100vw * 32 / 360);
+		height: calc(100vw * 32 / 360);
+		top: calc(100vw * 8 / 360);
+		right: calc(100vw * 8 / 360);
+	}
+
+	.n6-11 {
+		bottom: 0px;
+		left: 0px;
+		width: calc(100vw * 152 / 360);
+		height: calc(100vw * 24 / 360);		
+	}
+
+	.n6-12 {
+		width: calc(100vw * 136 / 360);
+		height: calc(100vw * 40 / 360);
+		left: calc(100vw * 8 / 360);
+		top: calc(100vw * 4 / 360);
+		line-height: calc(100vw * 20 / 360);
+		font-size: calc(100vw * 13 / 360);
+	}
+
+	.n6-13 {
+		width: calc(100vw * 136 / 360);
+		height: calc(100vw * 22 / 360);
+		left: calc(100vw * 8 / 360);
+		font-size: calc(100vw * 14 / 360);
+		top: calc(100vw * 44 / 360);
+	}
+
+	.n6-14 {
+		width: calc(100vw * 136 / 360);
+		height: calc(100vw * 18 / 360);
+		left: calc(100vw * 8 / 360);	
+		top: calc(100vw * 66 / 360);	
+	}
+
+	.n6-15 {
+		font-size: calc(100vw * 12 / 360);
+	}
+
+	.n6-16 {
+		margin-left: calc(100vw * 4 / 360);	
+		height: calc(100vw * 14 / 360);
+		border-radius: 3px;
+		padding-left: calc(100vw * 4 / 360);
+		padding-right: calc(100vw * 4 / 360);
+
+		span {
+			font-size: calc(100vw * 11 / 360);
+		}
+	}
+
+	.n6-17 {
+		height: calc(100vw * 20 / 360);
+		display: inline-flex;
+		left: calc(100vw * 8 / 360);	
+		top: calc(100vw * 88 / 360);	
+		padding-left: calc(100vw * 4 / 360);	
+		padding-right: calc(100vw * 4 / 360);	
+	}
+
+	.n6-18 {
+		font-size: calc(100vw * 12 / 360);
+	}
+
+	.n6-19 {
+		font-size: calc(100vw * 12 / 360);
+		margin-left: calc(100vw * 6 / 360);
+	}
+
+	.n6-20 {
+		font-size: calc(100vw * 12 / 360);
+		margin-left: calc(100vw * 2 / 360);
+	}
+}

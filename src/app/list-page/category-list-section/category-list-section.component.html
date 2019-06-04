@@ -1,0 +1,55 @@
+<div [ngClass]="{'effect-11': isNarrowingCategoryList}">
+  <div 
+    (click)="narrowCategoryList()"
+    class="hx-40 flex-row flex-between_center cursor-pointer "
+  >
+    <h1 class="h5-bo txt-color-71 mxl-12 ">Danh mục ngành hàng</h1>
+    <span 
+      [className]="isNarrowingCategoryList ? 'icon-increase-24px fsx-24 mxr-8 txt-color-17 ' : 'icon-decrease-24px fsx-24 mxr-8 txt-color-17 '"
+    ></span>
+  </div>
+  <div class="flex-row flex-start_center pxt-6 pxb-6 ">
+    <span class="wx-16 p-rel topx-m4 hx-16 leftx-6 icon-left-24px fsx-24 txt-color-71 "></span>
+    <span class="h6-re pxl-16 txt-color-71 ">Điện máy & Công nghệ</span>
+  </div>    
+  <ul>
+    <li>
+      <div class="flex-row flex-start_center ">
+        <span class="pxt-6 pxb-6 h6-re txt-color-71 pxl-44 ">Điện thoại - Máy tính bảng</span>
+      </div>    
+    </li>
+    <li>
+      <div class="flex-row flex-start_center ">
+        <span class="pxt-6 pxb-6 h6-bo txt-color-71 pxl-44 ">Điện thoại</span>
+      </div>    
+    </li>
+    <li>
+      <div class="flex-row flex-start_center ">
+        <span class="pxt-6 pxb-6 h6-re txt-color-71 pxl-44 ">Máy tính bảng</span>
+      </div>    
+    </li>
+    <li>
+      <div class="flex-row flex-start_center ">
+        <span class="pxt-6 pxb-6 h6-re txt-color-71 pxl-44 ">Sim & Thẻ Cào</span>
+      </div>    
+    </li>
+    <li>
+      <div class="flex-row flex-start_center ">
+        <span class="pxt-6 pxb-6 h6-re txt-color-71 pxl-44 ">Phụ kiện điện thoại - máy tính bảng</span>
+      </div>    
+    </li>
+    <li>
+      <div class="flex-row flex-start_center ">
+        <span class="pxt-6 pxb-6 h6-re txt-color-71 pxl-44 ">Điện thoại cố định</span>
+      </div>    
+    </li>
+    <li>
+      <div class="flex-row flex-start_center ">
+        <span class="pxt-6 pxb-6 h6-re txt-color-71 pxl-44 ">Đồ chơi điện thoại</span>
+      </div>    
+    </li>
+  </ul>
+  <div class="flex-row flex-start_center ">
+    <span class="pxt-6 pxb-6 h6-re txt-color-26 pxl-44 cursor-pointer ">Xem thêm</span>
+  </div>       
+</div>
