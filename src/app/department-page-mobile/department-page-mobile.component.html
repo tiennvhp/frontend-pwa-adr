@@ -1,28 +1,28 @@
 <div class="node-8 bg-21 flex-row flex-between_start ">
-	<div class="p-fixed n8_1 flex-row flex-between_center bg-67 shadow-0_0_16_0_0_0_2 ">
+	<div class="p-fixed n8_1 flex-row flex-between_center bg-67 shadow-0_0_16_0_0_0_2 zindex-1 ">
 		<div class="n8_2 flex-col flex-center_center ">
-			<span class="icon-adayroi-24px fsx-24 txt-color-17 n8_3 "></span>
+			<span class="icon-adayroi-24px fsx-24 txt-color-17 n8_3 effect-17 "></span>
 			<h1 class="h7-re txt-color-16 n8_4">Adayroi</h1>
 		</div>
 		<div class="n8_2 flex-col flex-center_center ">
-			<span class="icon-menu-24px fsx-24 txt-color-5 n8_3 "></span>
+			<span class="icon-menu-24px fsx-24 txt-color-5 n8_3 effect-17 "></span>
 			<h1 class="h7-re txt-color-5 n8_4">Danh mục</h1>
 		</div>
 		<div class="n8_2 flex-col flex-center_center ">
-			<span class="icon-discount-24px fsx-24 txt-color-17 n8_3 "></span>
+			<span class="icon-discount-24px fsx-24 txt-color-17 n8_3 effect-17 "></span>
 			<h1 class="h7-re txt-color-16 n8_4">Ưu đãi</h1>
 		</div>
 		<div class="n8_2 flex-col flex-center_center ">
-			<span class="icon-notification-24px fsx-24 txt-color-17 n8_3 "></span>
+			<span class="icon-notification-24px fsx-24 txt-color-17 n8_3 effect-17 "></span>
 			<h1 class="h7-re txt-color-16 n8_4">Thông báo</h1>
 		</div>
 		<div class="n8_2 flex-col flex-center_center ">
-			<span class="icon-account-24px fsx-24 txt-color-17 n8_3 "></span>
+			<span class="icon-account-24px fsx-24 txt-color-17 n8_3 effect-17 "></span>
 			<h1 class="h7-re txt-color-16 n8_4">Tài khoản</h1>
 		</div>
 	</div>
 	
-	<div class="n8_5 overflow-hidden ">
+	<div class="n8_5 overflow-hidden p-fixed ">
 		<ul>
 			<li>
 				<div class="bg-5 flex-col flex-center_center n8_8 mxt-1 ">
@@ -120,62 +120,116 @@
 			</div>
 			<ul class="n8_17 flex-row flex-between_start wrap">
 				<li>
-					<div class="n8_18 flex-col flex-center_center bg-67 ">
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18  ">
 						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
 					</div>
 				</li>
 				<li>
-					<div class="n8_18 flex-col flex-center_center bg-67 ">
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
 						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
 					</div>
 				</li>
 				<li>
-					<div class="n8_18 flex-col flex-center_center bg-67 ">
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
 						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
 					</div>
 				</li>
 				<li>
-					<div class="n8_18 flex-col flex-center_center bg-67 ">
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
 						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
 					</div>
 				</li>
 				<li>
-					<div class="n8_18 flex-col flex-center_center bg-67 ">
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
 						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
 					</div>
 				</li>
 				<li>
-					<div class="n8_18 flex-col flex-center_center bg-67 ">
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
 						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
 					</div>
 				</li>
 			</ul>
 		</div>
 
+		<div [ngClass]="{'effect-16': isNarrowList }" class="n8_15">
+			<div class="n8_20 flex-row flex-between_center bg-67 ">
+				<h1 class="h4-re h4-res-320 ">Thời trang nam</h1>
+				<div
+					(click)="narrowProductList()"
+					class="n8_21 flex-col flex-center_center " 
+				>
+					<span [ngClass]="!isNarrowList ? 'icon-down-24px' :'icon-up-24px'" class="icon-down-24px fsx-24 "></span>
+				</div>
+			</div>
+			<ul class="n8_17 flex-row wrap">
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+				<li>
+					<div class="n8_18 flex-col flex-center_center bg-67 effect-18 ">
+						<div class="n8_19 bg-cover " style="background-image: url(https://i.ibb.co/Kbq9RHc/Image.png);"></div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+
 		<div class="wrap flex-row n8_13 ">
-			<div class="n8_10 bg-67 flex-col flex-center_center ">
+			<div class="n8_10 bg-67 flex-col flex-center_center effect-18">
 				<div class="n8_11 bg-cover " style="background-image: url(https://i.ibb.co/xm7H47L/Image.png);"></div>
 				<h1 class="h7-re h7-re-res-320 n8_12 text-align-center ">Nạp thẻ điện thoại</h1>
 			</div>
-			<div class="n8_10 bg-67 flex-col flex-center_center ">
+			<div class="n8_10 bg-67 flex-col flex-center_center effect-18">
 				<div class="n8_11 bg-cover " style="background-image: url(https://i.ibb.co/tKpPtYC/Image.png);"></div>
 				<h1 class="h7-re h7-re-res-320 n8_12 text-align-center ">Vé máy bay giá rẻ</h1>
 			</div>
-			<div class="n8_10 bg-67 flex-col flex-center_center ">
+			<div class="n8_10 bg-67 flex-col flex-center_center effect-18">
 				<div class="n8_11 bg-cover " style="background-image: url(https://i.ibb.co/HqK242R/Image.png);"></div>
 				<h1 class="h7-re h7-re-res-320 n8_12 text-align-center ">Đặt phòng khách sạn</h1>
 			</div>
-			<div class="n8_10 bg-67 flex-col flex-center_center ">
+			<div class="n8_10 bg-67 flex-col flex-center_center effect-18">
 				<div class="n8_11 bg-cover " style="background-image: url(https://i.ibb.co/0tCHMjz/Image.png);"></div>
 				<h1 class="h7-re h7-re-res-320 n8_12 text-align-center ">Đặt chỗ</h1>			
 			</div>
-			<div class="n8_10 bg-67 flex-col flex-center_center ">
+			<div class="n8_10 bg-67 flex-col flex-center_center effect-18">
 				<div class="n8_11 bg-cover " style="background-image: url(https://i.ibb.co/0tCHMjz/Image.png);"></div>
 				<h1 class="h7-re h7-re-res-320 n8_12 text-align-center ">Đặt chỗ</h1>			
 			</div>		
-			<div class="n8_10 bg-67 flex-col flex-center_center "></div>			
+			<div class="n8_10 bg-67 flex-col flex-center_center effect-18"></div>			
 		</div>
-
 	</div>
 </div>
  

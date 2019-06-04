@@ -7,10 +7,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class DepartmentPageMobileComponent implements OnInit {
-
+  isNarrowList: Boolean
   constructor() { }
 
   ngOnInit() {
+  }
+
+  narrowProductList() {
+    this.isNarrowList = !this.isNarrowList
   }
 
 }

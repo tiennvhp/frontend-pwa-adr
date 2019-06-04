@@ -24,6 +24,7 @@ import { SearchResultTitleComponent } from './list-page/search-result-title/sear
 import { NotFoundCategoryComponent } from './list-page/not-found-category/not-found-category.component';
 import { ListPageMobileComponent } from './list-page-mobile/list-page-mobile.component';
 import { DepartmentPageMobileComponent } from './department-page-mobile/department-page-mobile.component';
+import { ErrorConnectionPageMobileComponent } from './error-connection-page-mobile/error-connection-page-mobile.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { DepartmentPageMobileComponent } from './department-page-mobile/departme
     NotFoundCategoryComponent,
     ListPageMobileComponent,
     DepartmentPageMobileComponent,
+    ErrorConnectionPageMobileComponent,
   ],
   imports: [
     BrowserModule,
