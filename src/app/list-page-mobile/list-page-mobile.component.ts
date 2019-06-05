@@ -144,13 +144,21 @@ export class ListPageMobileComponent implements OnInit {
   		back: '1.500.000đ'
   	},
   ];
+
+  isOpenModal: Boolean
+
   constructor() { }
 
   ngOnInit() {
   }
 
   openModalTools() {
-    alert(5)
+    this.isOpenModal = true;
+    
+  }
+
+  closeModal() {
+    this.isOpenModal = false;
   }
 
 }

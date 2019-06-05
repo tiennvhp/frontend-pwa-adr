@@ -25,6 +25,7 @@ import { NotFoundCategoryComponent } from './list-page/not-found-category/not-fo
 import { ListPageMobileComponent } from './list-page-mobile/list-page-mobile.component';
 import { DepartmentPageMobileComponent } from './department-page-mobile/department-page-mobile.component';
 import { ErrorConnectionPageMobileComponent } from './error-connection-page-mobile/error-connection-page-mobile.component';
+import { MerchantPageMobileComponent } from './merchant-page-mobile/merchant-page-mobile.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ErrorConnectionPageMobileComponent } from './error-connection-page-mobi
     ListPageMobileComponent,
     DepartmentPageMobileComponent,
     ErrorConnectionPageMobileComponent,
+    MerchantPageMobileComponent,
   ],
   imports: [
     BrowserModule,

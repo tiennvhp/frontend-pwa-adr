@@ -1,12 +1,30 @@
+
+
 body, html {
   margin: 0px;
   padding: 0px;
 }
-
+$font-weight-normal:          400 !default;
+$font-family-sans-serif:      "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+$font-size-base:              0.8125rem !default; // Assumes the browser default, typically `16px`
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
 body {
-  margin:0px;
-  padding: 0px;
-  background-color: #F8F8FA;
+  margin: 0; // 1
+  font-family: $font-family-base;
+  font-size: 13px;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color:#212529;
+  text-align: left; // 3
+  background-color: #F3F4F6; // 2
+}
+
+
+label {
+  margin-bottom: 0px !important;
 }
 
 html {

@@ -30,225 +30,229 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+$colorx_1: #bec0c8;
+$colorx_2: #fff;
+$colorx_3: rgb(0, 0, 0);
+$colorx_4: rgb(255, 255, 255);
+$colorx_5: #35599f;
+$colorx_6: rgb(190, 192, 200);
+$colorx_7: #497ada;
+$colorx_8: #8e9098;
+$colorx_9: rgb(229, 57, 53);
 
-
-$colorx1: #bec0c8;
-$colorx2: #fff;
-$colorx3: rgb(0, 0, 0);
-$colorx4: rgb(255, 255, 255);
-$colorx5: #35599f;
-$colorx6: rgb(190, 192, 200);
-$colorx7: #497ada;
-$colorx8: #8e9098;
-$colorx9: rgb(229, 57, 53);
-
+.icon-chat-24px {
+	&:before {
+		content: "\e9df";
+		color: $colorx_1;
+	}
+}
 .icon-smartphone-tablet-24px {
 	&:before {
 		content: "\e9d2";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-dumbbell-24px {
 	&:before {
 		content: "\e9d3";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-car-24px {
 	&:before {
 		content: "\e9d4";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-stroller-24px {
 	&:before {
 		content: "\e9d5";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-sofa-24px {
 	&:before {
 		content: "\e9d6";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-food-24px {
 	&:before {
 		content: "\e9d7";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-cosmetic-24px {
 	&:before {
 		content: "\e9d8";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-shirt-24px {
 	&:before {
 		content: "\e9d9";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-laptop-24px {
 	&:before {
 		content: "\e9da";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-fridge-24px {
 	&:before {
 		content: "\e9db";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-tv-24px {
 	&:before {
 		content: "\e9dc";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-heart-health-24px {
 	&:before {
 		content: "\e9dd";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-suitcase-24px {
 	&:before {
 		content: "\e9de";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-foryou {
 	&:before {
 		content: "\e9d1";
-		color: $colorx2;
+		color: $colorx_2;
 	}
 }
 .icon-notification-24px {
 	&:before {
 		content: "\e9cf";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-discount-24px {
 	&:before {
 		content: "\e9d0";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-list-view-24px {
 	&:before {
 		content: "\e9ce";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-help-v2-16px {
 	&:before {
 		content: "\e9cd";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-giftcode-color-v2-24px {
 	.path1 {
 		&:before {
 			content: "\e9c5";
-			color: $colorx3;
+			color: $colorx_3;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e9c6";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 	.path3 {
 		&:before {
 			content: "\e9c7";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 	.path4 {
 		&:before {
 			content: "\e9c8";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 	.path5 {
 		&:before {
 			content: "\e9c9";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 	.path6 {
 		&:before {
 			content: "\e9ca";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 	.path7 {
 		&:before {
 			content: "\e9cb";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 	.path8 {
 		&:before {
 			content: "\e9cc";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 }
 .icon-icon-travel-3 {
 	&:before {
 		content: "\e9bb";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-icon-travel-4 {
 	&:before {
 		content: "\e9bc";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-icon-travel-5 {
 	&:before {
 		content: "\e9bd";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-icon-travel-6 {
 	&:before {
 		content: "\e9be";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-icon-travel-7 {
 	&:before {
 		content: "\e9bf";
-		color: $colorx5;
+		color: $colorx_5;
 	}
 }
 .icon-transit-32px {
 	.path1 {
 		&:before {
 			content: "\e9c0";
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e9c1";
 			margin-left: -0.974609375em;
-			color: $colorx6;
+			color: $colorx_6;
 		}
 	}
 }
@@ -256,21 +260,21 @@ $colorx9: rgb(229, 57, 53);
 	.path1 {
 		&:before {
 			content: "\e9c2";
-			color: $colorx3;
+			color: $colorx_3;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e9c3";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 }
 .icon-icon-travel-2 {
 	&:before {
 		content: "\e9c4";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-go-end-24px {
@@ -291,58 +295,58 @@ $colorx9: rgb(229, 57, 53);
 .icon-voucher-16px {
 	&:before {
 		content: "\e9b7";
-		color: $colorx7;
+		color: $colorx_7;
 	}
 }
 .icon-airplane-mode {
 	&:before {
 		content: "\e9af";
-		color: $colorx2;
+		color: $colorx_2;
 	}
 }
 .icon-children {
 	&:before {
 		content: "\e9b0";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-conversion-vertical-2 {
 	&:before {
 		content: "\e9b1";
-		color: $colorx8;
+		color: $colorx_8;
 	}
 }
 .icon-current-location-16px {
 	&:before {
 		content: "\e9b2";
-		color: $colorx7;
+		color: $colorx_7;
 	}
 }
 .icon-pacifier {
 	&:before {
 		content: "\e9b3";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-selected-checked {
 	.path1 {
 		&:before {
 			content: "\e9b4";
-			color: $colorx9;
+			color: $colorx_9;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e9b5";
 			margin-left: -1em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 }
 .icon-standing-man {
 	&:before {
 		content: "\e9b6";
-		color: $colorx1;
+		color: $colorx_1;
 	}
 }
 .icon-notification-web-24px {
@@ -673,21 +677,21 @@ $colorx9: rgb(229, 57, 53);
 .icon-FlashSale-111 {
 	&:before {
 		content: "\e940";
-		color: $colorx2;
+		color: $colorx_2;
 	}
 }
 .icon-flashsale-tag {
 	.path1 {
 		&:before {
 			content: "\e941";
-			color: $colorx9;
+			color: $colorx_9;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e942";
 			margin-left: -4.400390625em;
-			color: $colorx4;
+			color: $colorx_4;
 		}
 	}
 }

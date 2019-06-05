@@ -1199,5 +1199,109 @@
 	</div>
 
 
-	<div class="p-fixed node-10"></div>
+	<div [ngClass]="!isOpenModal ? 'display-none ' : ''"  class="p-fixed node-10 ">
+		<div [ngClass]="!isOpenModal ? '' : 'n10_8'"  class="n10_1 p-abs bg-67 radius-5_5_0_0 ">
+			<div class="n10_2 flex-col flex-center_center ">
+				<div class="n10_3 bg-19 radius-sides_circle "></div>
+			</div>
+			<div class="n10_4 flex-row flex-between_center ">
+				<span class="h3-bo h3-res-320 ">Tùy chọn nhanh</span>
+				<div class="n10_5 flex-col flex-center_center bg-20 radius-sides_circle ">
+					<span (click)="closeModal()" class="icon-remove-16px fsx-16"></span>
+				</div>
+			</div>
+
+			<ul>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<div class="flex-row flex-between_center ">
+							<div class="flex-row flex-start_center ">
+								<span class="icon-home-24px fsx-24 n10_6 txt-color-17 "></span>
+								<span class="n10_7 h4-re h4-res-320 ">Trở về trang chủ</span>
+							</div>
+						</div>
+						<span class="icon-right-24px fsx-24 n10_6 txt-color-17 "></span>
+					</div>					
+				</li>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<div class="flex-row flex-between_center ">
+							<div class="flex-row flex-start_center ">
+								<span class="icon-account-24px fsx-24 n10_6 txt-color-17 "></span>
+								<span class="n10_7 h4-re h4-res-320 ">Tài khoản của tôi</span>
+							</div>
+						</div>
+						<span class="icon-right-24px fsx-24 n10_6 txt-color-17 "></span>
+					</div>					
+				</li>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<div class="flex-row flex-between_center ">
+							<div class="flex-row flex-start_center ">
+								<span class="icon-chat-24px fsx-24 n10_6 txt-color-17 "></span>
+								<span class="n10_7 h4-re h4-res-320 ">Chat với Adayroi</span>
+							</div>
+						</div>
+						<span class="icon-right-24px fsx-24 n10_6 txt-color-17 "></span>
+					</div>					
+				</li>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<div class="flex-row flex-between_center ">
+							<div class="flex-row flex-start_center ">
+								<span class="icon-phone-24px fsx-24 n10_6 txt-color-17 "></span>
+								<span class="n10_7 h4-re h4-res-320 ">Gọi điện Hotline</span>
+							</div>
+						</div>
+						<span class="icon-right-24px fsx-24 n10_6 txt-color-17 "></span>
+					</div>					
+				</li>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<div class="flex-row flex-between_center ">
+							<div class="flex-row flex-start_center ">
+								<span class="icon-share-24px fsx-24 n10_6 txt-color-17 "></span>
+								<span class="n10_7 h4-re h4-res-320 ">Chia sẻ</span>
+							</div>
+						</div>
+						<span class="icon-right-24px fsx-24 n10_6 txt-color-17 "></span>
+					</div>							
+				</li>
+			</ul>
+
+			<ul>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<span class="n10_7 h4-re h4-res-320 ">Phổ biến</span>
+						<span class="icon-check-24px fsx-24 n10_6 txt-color-5 "></span>
+					</div>						
+				</li>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<span class="n10_7 h4-re h4-res-320 ">Giá thấp nhất</span>
+						<span class="icon-check-24px fsx-24 n10_6 txt-color-5 "></span>
+					</div>						
+				</li>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<span class="n10_7 h4-re h4-res-320 ">Giá cao nhất</span>
+						<span class="icon-check-24px fsx-24 n10_6 txt-color-5 "></span>
+					</div>						
+				</li>
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<span class="n10_7 h4-re h4-res-320 ">Bán chạy</span>
+						<span class="icon-check-24px fsx-24 n10_6 txt-color-5 "></span>
+					</div>						
+				</li>	
+				<li>
+					<div class="n10_4 flex-row flex-between_center ">
+						<span class="n10_7 h4-re h4-res-320 ">Hàng mới</span>
+						<span class="icon-check-24px fsx-24 n10_6 txt-color-5 "></span>
+					</div>						
+				</li>											
+			</ul>
+	
+		</div>
+	</div>
 </div>

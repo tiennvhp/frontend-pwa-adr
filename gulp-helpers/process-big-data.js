@@ -117,7 +117,7 @@ exports.processBigData  = (allFileContent) => {
   const enterLineNumbersModule = require('./enter-data-helpers/enter-line-numbers-data.js')
   allFileContent.match(lineNumbersRegex) !== null ? enterLineNumbersModule.enterLineNumbersData(allFileContent.match(lineNumbersRegex)) : enterLineNumbersModule.enterLineNumbersData([])
 
-  const widthRegex = /wx-(\S*)/gm
+  const widthRegex = /wx-((\w*)(pc|()))/gm
   const enterWidthModule = require('./enter-data-helpers/enter-width-data.js')
   allFileContent.match(widthRegex) !== null ? enterWidthModule.enterWidthData(allFileContent.match(widthRegex)) : enterWidthModule.enterWidthData([])
 

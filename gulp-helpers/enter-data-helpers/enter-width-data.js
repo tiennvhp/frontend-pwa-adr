@@ -105,10 +105,9 @@ exports.enterWidthData = (widths) => {
 
         //calc_10p6pc_p_20p5
       }
-
-      content = content + `
-.${uniqueWidth} {width: ${widthValue};}
-`
+      let xxxx = `.${uniqueWidth} {width: ${widthValue};}`;
+      xxxx = xxxx.replace(">","").replace(`"`, ``).replace(`'`, ``).replace(`<`, ``).replace(`/`, ``).replace(`div`, ``)
+      content = content + xxxx
     })
 
 
