@@ -158,7 +158,7 @@ input:focus {
 .h1-bo {
   font-size: 20px;
   line-height: 32px;
-  font-weight: 400; }
+  font-weight: 700; }
 
 .h2-re {
   font-size: 18px;
@@ -1281,6 +1281,9 @@ input:focus {
 .hx-20 {
   height: 20px; }
 
+.hx-41 {
+  height: 41px; }
+
 .hx-178 {
   height: 178px; }
 
@@ -1395,6 +1398,12 @@ input:focus {
 .pxt-8 {
   padding-top: 8px; }
 
+.pxl-10 {
+  padding-left: 10px; }
+
+.pxr-10 {
+  padding-right: 10px; }
+
 .pxl-25 {
   padding-left: 25px; }
 
@@ -1452,14 +1461,11 @@ input:focus {
 .mxl-96 {
   margin-left: 96px; }
 
-.mxr-12 {
-  margin-right: 12px; }
+.mxr-8 {
+  margin-right: 8px; }
 
 .mxr-1 {
   margin-right: 1px; }
-
-.mxr-8 {
-  margin-right: 8px; }
 
 .mxr-2 {
   margin-right: 2px; }
@@ -1469,6 +1475,9 @@ input:focus {
 
 .mxr-4 {
   margin-right: 4px; }
+
+.mxr-12 {
+  margin-right: 12px; }
 
 .mxr-16 {
   margin-right: 16px; }
@@ -1500,8 +1509,8 @@ input:focus {
 .mx-auto {
   margin: auto; }
 
-.mxt-6 {
-  margin-top: 6px; }
+.mxt-14 {
+  margin-top: 14px; }
 
 .mxt-1 {
   margin-top: 1px; }
@@ -1521,14 +1530,14 @@ input:focus {
 .mxt-5 {
   margin-top: 5px; }
 
+.mxt-6 {
+  margin-top: 6px; }
+
 .mxt-12 {
   margin-top: 12px; }
 
 .mxt-10 {
   margin-top: 10px; }
-
-.mxt-14 {
-  margin-top: 14px; }
 
 .mxt-24 {
   margin-top: 24px; }
@@ -1868,6 +1877,9 @@ input:focus {
 
 .rightx-30 {
   right: 30px; }
+
+.rightx-m1 {
+  right: -1px; }
 
 .bottomx-0 {
   bottom: 0; }
@@ -2226,6 +2238,9 @@ input:focus {
 
 .txt-color-44 {
   color: #a24930; }
+
+.txt-color-66 {
+  color: #000; }
 
 .txt-color-37 {
   color: #1cbe55; }
