@@ -9,6 +9,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ListPageMobileComponent implements OnInit {
   slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "dots": true };
+  slideConfigHeadMobile = {"slidesToShow": 1, "slidesToScroll": 1, "dots": true, "prevArrow": false, "nextArrow": false };
   productList = [
   	{
   		imgUrl: 'https://i.ibb.co/nR9xNWq/image.png',

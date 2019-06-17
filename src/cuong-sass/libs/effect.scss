@@ -22,7 +22,9 @@
 	}
 }
 
-
+.fulls-screen {
+	width: 100vw;
+}
 
 
 
@@ -343,8 +345,115 @@
 	}
 }
 
-.node1 {
-	width: 100px;
-	height: 100px;
-	background-color: red;
+
+.effect-19 {
+	.e19-1 {
+		width: calc(100% / 5);
+	}
+}
+
+
+
+.effect-20 {
+	margin: 0px !important;
+
+	.e12-1 {
+		height: calc(100vw * 180 / 360);
+	}
+
+	.slick-list {
+		.slick-track {
+			margin-left: unset !important;
+		}
+	}
+
+	.slick-dots {
+		bottom: 24px;
+		height: calc(100vw * 24 / 360);
+
+		li {
+			margin: 0px !important;
+			width: calc(100vw * 6 / 360);
+	    	height: calc(100vw * 6 / 360);
+	    	padding-left: calc(100vw * 3 / 360);;
+	    	padding-right: calc(100vw * 3 / 360);
+	    	box-sizing: content-box;
+
+			button {
+				width: calc(100vw * 6 / 360);
+		    	height: calc(100vw * 6 / 360);
+	    		margin: 0px !important;
+	    		padding: 0px !important;
+	    		background: rgba(0,0,0, 0.2);
+	    		border-radius: 100%;
+				position: relative;
+				border: calc(100vw * 1 / 360) solid rgba(255,255,255, 0.3);
+
+	    		&:before {
+	    			display: none;
+	    		}
+			}
+		}
+
+	    .slick-active {
+			width: calc(100vw * 8 / 360);
+	    	height: calc(100vw * 8 / 360);	    	
+	    	button {
+				width: calc(100vw * 8 / 360);
+		    	height: calc(100vw * 8 / 360);	    		
+	    		background: #E53935;
+	    		border: calc(100vw * 1 / 360) solid white;
+	    	}
+	    }
+	}	
+}
+
+
+.effect-21 {
+	margin: 0px !important;
+
+	.e12-1 {
+		height: calc(100vw * 180 / 360);
+	}
+
+	.slick-list {
+		.slick-track {
+			margin-left: unset !important;
+		}
+	}
+
+	.slick-dots {
+		bottom: 0px;
+		height: calc(100vw * 24 / 360);
+
+		li {
+			margin: 0px !important;
+			width: calc(100vw * 6 / 360);
+	    	height: calc(100vw * 6 / 360);
+	    	padding-left: calc(100vw * 3 / 360);;
+	    	padding-right: calc(100vw * 3 / 360);
+	    	box-sizing: content-box;
+
+			button {
+				width: calc(100vw * 6 / 360);
+		    	height: calc(100vw * 6 / 360);
+	    		margin: 0px !important;
+	    		padding: 0px !important;
+	    		background: $color-19;
+	    		border-radius: 100%;
+				position: relative;
+				border: calc(100vw * 1 / 360) solid rgba(255,255,255, 0.3);
+
+	    		&:before {
+	    			display: none;
+	    		}
+			}
+		}
+
+	    .slick-active {
+	    	button {
+	    		background: $color-5;
+	    	}
+	    }
+	}	
 }

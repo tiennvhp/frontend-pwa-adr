@@ -30,229 +30,288 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-$colorx_1: #bec0c8;
-$colorx_2: #fff;
-$colorx_3: rgb(0, 0, 0);
-$colorx_4: rgb(255, 255, 255);
-$colorx_5: #35599f;
-$colorx_6: rgb(190, 192, 200);
-$colorx_7: #497ada;
-$colorx_8: #8e9098;
-$colorx_9: rgb(229, 57, 53);
 
-.icon-chat-24px {
+
+$colorx_1: #fff;
+$colorx_2: rgb(217, 79, 61);
+$colorx_3: rgb(242, 192, 66);
+$colorx_4: rgb(80, 133, 237);
+$colorx_5: rgb(87, 167, 92);
+$colorx_6: #bec0c8;
+$colorx_7: #ca332f;
+$colorx_8: rgb(0, 0, 0);
+$colorx_9: rgb(255, 255, 255);
+$colorx_10: #35599f;
+$colorx_11: rgb(190, 192, 200);
+$colorx_12: #497ada;
+$colorx_13: #8e9098;
+$colorx_14: rgb(229, 57, 53);
+
+.icon-vingroup-footer {
 	&:before {
-		content: "\e9df";
+		content: "\e9e7";
+	}
+}
+.icon-Rectangle {
+	&:before {
+		content: "\e9e6";
 		color: $colorx_1;
 	}
 }
-.icon-smartphone-tablet-24px {
-	&:before {
-		content: "\e9d2";
-		color: $colorx_1;
-	}
-}
-.icon-dumbbell-24px {
-	&:before {
-		content: "\e9d3";
-		color: $colorx_1;
-	}
-}
-.icon-car-24px {
-	&:before {
-		content: "\e9d4";
-		color: $colorx_1;
-	}
-}
-.icon-stroller-24px {
-	&:before {
-		content: "\e9d5";
-		color: $colorx_1;
-	}
-}
-.icon-sofa-24px {
-	&:before {
-		content: "\e9d6";
-		color: $colorx_1;
-	}
-}
-.icon-food-24px {
-	&:before {
-		content: "\e9d7";
-		color: $colorx_1;
-	}
-}
-.icon-cosmetic-24px {
-	&:before {
-		content: "\e9d8";
-		color: $colorx_1;
-	}
-}
-.icon-shirt-24px {
-	&:before {
-		content: "\e9d9";
-		color: $colorx_1;
-	}
-}
-.icon-laptop-24px {
-	&:before {
-		content: "\e9da";
-		color: $colorx_1;
-	}
-}
-.icon-fridge-24px {
-	&:before {
-		content: "\e9db";
-		color: $colorx_1;
-	}
-}
-.icon-tv-24px {
-	&:before {
-		content: "\e9dc";
-		color: $colorx_1;
-	}
-}
-.icon-heart-health-24px {
-	&:before {
-		content: "\e9dd";
-		color: $colorx_1;
-	}
-}
-.icon-suitcase-24px {
-	&:before {
-		content: "\e9de";
-		color: $colorx_1;
-	}
-}
-.icon-foryou {
-	&:before {
-		content: "\e9d1";
-		color: $colorx_2;
-	}
-}
-.icon-notification-24px {
-	&:before {
-		content: "\e9cf";
-		color: $colorx_1;
-	}
-}
-.icon-discount-24px {
-	&:before {
-		content: "\e9d0";
-		color: $colorx_1;
-	}
-}
-.icon-list-view-24px {
-	&:before {
-		content: "\e9ce";
-		color: $colorx_1;
-	}
-}
-.icon-help-v2-16px {
-	&:before {
-		content: "\e9cd";
-		color: $colorx_1;
-	}
-}
-.icon-giftcode-color-v2-24px {
+.icon-google-color-24px {
 	.path1 {
 		&:before {
-			content: "\e9c5";
-			color: $colorx_3;
+			content: "\e9e2";
+			color: $colorx_2;
 		}
 	}
 	.path2 {
 		&:before {
-			content: "\e9c6";
+			content: "\e9e3";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_3;
 		}
 	}
 	.path3 {
 		&:before {
-			content: "\e9c7";
+			content: "\e9e4";
 			margin-left: -1em;
 			color: $colorx_4;
 		}
 	}
 	.path4 {
 		&:before {
+			content: "\e9e5";
+			margin-left: -1em;
+			color: $colorx_5;
+		}
+	}
+}
+.icon-clock-16px-1 {
+	&:before {
+		content: "\e9e0";
+		color: $colorx_6;
+	}
+}
+.icon-add-circle-16px {
+	&:before {
+		content: "\e9e1";
+		color: $colorx_7;
+	}
+}
+.icon-chat-24px {
+	&:before {
+		content: "\e9df";
+		color: $colorx_6;
+	}
+}
+.icon-smartphone-tablet-24px {
+	&:before {
+		content: "\e9d2";
+		color: $colorx_6;
+	}
+}
+.icon-dumbbell-24px {
+	&:before {
+		content: "\e9d3";
+		color: $colorx_6;
+	}
+}
+.icon-car-24px {
+	&:before {
+		content: "\e9d4";
+		color: $colorx_6;
+	}
+}
+.icon-stroller-24px {
+	&:before {
+		content: "\e9d5";
+		color: $colorx_6;
+	}
+}
+.icon-sofa-24px {
+	&:before {
+		content: "\e9d6";
+		color: $colorx_6;
+	}
+}
+.icon-food-24px {
+	&:before {
+		content: "\e9d7";
+		color: $colorx_6;
+	}
+}
+.icon-cosmetic-24px {
+	&:before {
+		content: "\e9d8";
+		color: $colorx_6;
+	}
+}
+.icon-shirt-24px {
+	&:before {
+		content: "\e9d9";
+		color: $colorx_6;
+	}
+}
+.icon-laptop-24px {
+	&:before {
+		content: "\e9da";
+		color: $colorx_6;
+	}
+}
+.icon-fridge-24px {
+	&:before {
+		content: "\e9db";
+		color: $colorx_6;
+	}
+}
+.icon-tv-24px {
+	&:before {
+		content: "\e9dc";
+		color: $colorx_6;
+	}
+}
+.icon-heart-health-24px {
+	&:before {
+		content: "\e9dd";
+		color: $colorx_6;
+	}
+}
+.icon-suitcase-24px {
+	&:before {
+		content: "\e9de";
+		color: $colorx_6;
+	}
+}
+.icon-foryou {
+	&:before {
+		content: "\e9d1";
+		color: $colorx_1;
+	}
+}
+.icon-notification-24px {
+	&:before {
+		content: "\e9cf";
+		color: $colorx_6;
+	}
+}
+.icon-discount-24px {
+	&:before {
+		content: "\e9d0";
+		color: $colorx_6;
+	}
+}
+.icon-list-view-24px {
+	&:before {
+		content: "\e9ce";
+		color: $colorx_6;
+	}
+}
+.icon-help-v2-16px {
+	&:before {
+		content: "\e9cd";
+		color: $colorx_6;
+	}
+}
+.icon-giftcode-color-v2-24px {
+	.path1 {
+		&:before {
+			content: "\e9c5";
+			color: $colorx_8;
+		}
+	}
+	.path2 {
+		&:before {
+			content: "\e9c6";
+			margin-left: -1em;
+			color: $colorx_9;
+		}
+	}
+	.path3 {
+		&:before {
+			content: "\e9c7";
+			margin-left: -1em;
+			color: $colorx_9;
+		}
+	}
+	.path4 {
+		&:before {
 			content: "\e9c8";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 	.path5 {
 		&:before {
 			content: "\e9c9";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 	.path6 {
 		&:before {
 			content: "\e9ca";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 	.path7 {
 		&:before {
 			content: "\e9cb";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 	.path8 {
 		&:before {
 			content: "\e9cc";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 }
 .icon-icon-travel-3 {
 	&:before {
 		content: "\e9bb";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-icon-travel-4 {
 	&:before {
 		content: "\e9bc";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-icon-travel-5 {
 	&:before {
 		content: "\e9bd";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-icon-travel-6 {
 	&:before {
 		content: "\e9be";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-icon-travel-7 {
 	&:before {
 		content: "\e9bf";
-		color: $colorx_5;
+		color: $colorx_10;
 	}
 }
 .icon-transit-32px {
 	.path1 {
 		&:before {
 			content: "\e9c0";
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e9c1";
 			margin-left: -0.974609375em;
-			color: $colorx_6;
+			color: $colorx_11;
 		}
 	}
 }
@@ -260,21 +319,21 @@ $colorx_9: rgb(229, 57, 53);
 	.path1 {
 		&:before {
 			content: "\e9c2";
-			color: $colorx_3;
+			color: $colorx_8;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e9c3";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 }
 .icon-icon-travel-2 {
 	&:before {
 		content: "\e9c4";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-go-end-24px {
@@ -295,58 +354,58 @@ $colorx_9: rgb(229, 57, 53);
 .icon-voucher-16px {
 	&:before {
 		content: "\e9b7";
-		color: $colorx_7;
+		color: $colorx_12;
 	}
 }
 .icon-airplane-mode {
 	&:before {
 		content: "\e9af";
-		color: $colorx_2;
+		color: $colorx_1;
 	}
 }
 .icon-children {
 	&:before {
 		content: "\e9b0";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-conversion-vertical-2 {
 	&:before {
 		content: "\e9b1";
-		color: $colorx_8;
+		color: $colorx_13;
 	}
 }
 .icon-current-location-16px {
 	&:before {
 		content: "\e9b2";
-		color: $colorx_7;
+		color: $colorx_12;
 	}
 }
 .icon-pacifier {
 	&:before {
 		content: "\e9b3";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-selected-checked {
 	.path1 {
 		&:before {
 			content: "\e9b4";
-			color: $colorx_9;
+			color: $colorx_14;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e9b5";
 			margin-left: -1em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 }
 .icon-standing-man {
 	&:before {
 		content: "\e9b6";
-		color: $colorx_1;
+		color: $colorx_6;
 	}
 }
 .icon-notification-web-24px {
@@ -677,21 +736,21 @@ $colorx_9: rgb(229, 57, 53);
 .icon-FlashSale-111 {
 	&:before {
 		content: "\e940";
-		color: $colorx_2;
+		color: $colorx_1;
 	}
 }
 .icon-flashsale-tag {
 	.path1 {
 		&:before {
 			content: "\e941";
-			color: $colorx_9;
+			color: $colorx_14;
 		}
 	}
 	.path2 {
 		&:before {
 			content: "\e942";
 			margin-left: -4.400390625em;
-			color: $colorx_4;
+			color: $colorx_9;
 		}
 	}
 }

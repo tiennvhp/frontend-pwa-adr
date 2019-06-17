@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?jwikb1');
-  src:  url('fonts/icomoon.eot?jwikb1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?jwikb1') format('truetype'),
-    url('fonts/icomoon.woff?jwikb1') format('woff'),
-    url('fonts/icomoon.svg?jwikb1#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?9z8w84');
+  src:  url('fonts/icomoon.eot?9z8w84#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?9z8w84') format('truetype'),
+    url('fonts/icomoon.woff?9z8w84') format('woff'),
+    url('fonts/icomoon.svg?9z8w84#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,40 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-vingroup-footer:before {
+  content: "\e9e7";
+}
+.icon-Rectangle:before {
+  content: "\e9e6";
+  color: #fff;
+}
+.icon-google-color-24px .path1:before {
+  content: "\e9e2";
+  color: rgb(217, 79, 61);
+}
+.icon-google-color-24px .path2:before {
+  content: "\e9e3";
+  margin-left: -1em;
+  color: rgb(242, 192, 66);
+}
+.icon-google-color-24px .path3:before {
+  content: "\e9e4";
+  margin-left: -1em;
+  color: rgb(80, 133, 237);
+}
+.icon-google-color-24px .path4:before {
+  content: "\e9e5";
+  margin-left: -1em;
+  color: rgb(87, 167, 92);
+}
+.icon-clock-16px-1:before {
+  content: "\e9e0";
+  color: #bec0c8;
+}
+.icon-add-circle-16px:before {
+  content: "\e9e1";
+  color: #ca332f;
+}
 .icon-chat-24px:before {
   content: "\e9df";
   color: #bec0c8;

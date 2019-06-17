@@ -1,0 +1,40 @@
+.node-12 {
+	height: calc(100vw * 244 / 360); 
+	position: relative;
+	overflow: hidden;
+
+	&:after {
+		content: '';
+		position: absolute;
+		height: calc(100vw * 100 / 360); 
+		width: 100%;
+		background-color: $color-67;
+		bottom: 0px;
+		left: 0px;
+	    transform-origin: top left;
+	    transform: rotate(10deg);		
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		height: calc(100vw * 100 / 360); 
+		width: 100%;
+		background-color: $color-67;
+		bottom: 0px;
+		left: 0px;		
+	    transform-origin: top right;
+	    transform: rotate(-10deg);		
+	}
+
+	.n12-1 {
+		width: calc(100vw * 328 / 360); 
+		height: calc(100vw * 164 / 360); 
+		margin-top: calc(100vw * 64 / 360); 
+	}
+
+	.n12-2 {
+		width: calc(100vw * 328 / 360); 
+		height: calc(100vw * 164 / 360); 		
+	}
+}
