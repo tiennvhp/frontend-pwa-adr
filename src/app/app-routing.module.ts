@@ -8,6 +8,7 @@ import { DepartmentPageMobileComponent } from './department-page-mobile/departme
 import { ErrorConnectionPageMobileComponent } from './error-connection-page-mobile/error-connection-page-mobile.component';
 import { MerchantPageMobileComponent } from './merchant-page-mobile/merchant-page-mobile.component';
 import { DetailPageMobileComponent } from './detail-page-mobile/detail-page-mobile.component';
+import { BanTheComponent } from './ban-the/ban-the.component';
 
  
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'department-mobile', component: DepartmentPageMobileComponent },
   { path: 'error-connection-mobile', component: ErrorConnectionPageMobileComponent },
   { path: 'merchant-mobile', component: MerchantPageMobileComponent },
+  { path: 'ban-the', component: BanTheComponent },
 ];
  
 @NgModule({
