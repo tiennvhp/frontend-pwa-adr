@@ -27,6 +27,7 @@ import { DepartmentPageMobileComponent } from './department-page-mobile/departme
 import { ErrorConnectionPageMobileComponent } from './error-connection-page-mobile/error-connection-page-mobile.component';
 import { MerchantPageMobileComponent } from './merchant-page-mobile/merchant-page-mobile.component';
 import { DetailPageMobileComponent } from './detail-page-mobile/detail-page-mobile.component';
+import { BanTheComponent } from './ban-the/ban-the.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { DetailPageMobileComponent } from './detail-page-mobile/detail-page-mobi
     ErrorConnectionPageMobileComponent,
     MerchantPageMobileComponent,
     DetailPageMobileComponent,
+    BanTheComponent,
   ],
   imports: [
     BrowserModule,
