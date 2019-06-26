@@ -9,6 +9,7 @@ import { ErrorConnectionPageMobileComponent } from './error-connection-page-mobi
 import { MerchantPageMobileComponent } from './merchant-page-mobile/merchant-page-mobile.component';
 import { DetailPageMobileComponent } from './detail-page-mobile/detail-page-mobile.component';
 import { BanTheComponent } from './ban-the/ban-the.component';
+import { BanTheMobileComponent } from './ban-the-mobile/ban-the-mobile.component';
 
  
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'error-connection-mobile', component: ErrorConnectionPageMobileComponent },
   { path: 'merchant-mobile', component: MerchantPageMobileComponent },
   { path: 'ban-the', component: BanTheComponent },
+  { path: 'ban-the-mobile', component: BanTheMobileComponent },
 ];
  
 @NgModule({
