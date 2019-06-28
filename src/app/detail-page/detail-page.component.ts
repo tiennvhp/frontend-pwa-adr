@@ -1,4 +1,6 @@
 import { Component, ViewEncapsulation,  OnInit } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-detail-page',
@@ -11,7 +13,7 @@ export class DetailPageComponent implements OnInit {
 	slideConfig1 = {"slidesToShow": 4, "slidesToScroll": 1, "dots": false };
 
 
-	constructor() { }
+	constructor(private modalService: NgbModal) { }
 
 	ngOnInit() {
 		// start thumbSlide
@@ -147,4 +149,50 @@ export class DetailPageComponent implements OnInit {
 	}
 	// end thumbSlide
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	closeResult: string;
+	open(content) {
+		console.log(content)
+		this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title', windowClass: 'effect-22'}).result.then((result) => {
+		  this.closeResult = `Closed with: ${result}`;
+		}, (reason) => {
+		  this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+		});
+	}
+
+	private getDismissReason(reason: any): string {
+		if (reason === ModalDismissReasons.ESC) {
+		  return 'by pressing ESC';
+		} else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+		  return 'by clicking on a backdrop';
+		} else {
+		  return  `with: ${reason}`;
+		}
+	}
 }

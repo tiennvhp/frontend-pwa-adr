@@ -479,5 +479,88 @@
 
 
 .effect-22 {
-  border-bottom: calc(100vw * 2 / 360) solid $color-5;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .modal-dialog {
+    max-width: unset;
+
+    .modal-content {
+      border-radius: 0px;
+
+      .modal-header {
+        
+        .e22-1 {
+          padding: unset;
+          margin: unset;
+          background: $color-18;
+        }
+      }
+
+      .modal-body {
+        width: 816px;
+      }
+
+      .e22-2 {
+        width: 816px;
+      }
+
+      .e22-3 {
+        width: 400px;
+        padding: 0px;
+      }
+
+      .e22-4 {
+        width: 400px;
+      }
+
+      .e22-5 {
+        width: 400px;
+      }
+    }
+  }
+}
+
+.cs-scroll-bar-modal {
+  overflow-y: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $color-19; 
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }  
+}
+
+.max-height-600 {
+  max-height: 600px;
+}
+
+.max-height-452 {
+  max-height: 452px;
+}
+
+.max-height-592 {
+  max-height: 452px;
+}
+
+.effect-23 {
+  li:nth-child(5n+5) {
+    margin-right: unset !important;
+  }
 }
