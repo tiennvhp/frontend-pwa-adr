@@ -195,4 +195,42 @@ export class DetailPageComponent implements OnInit {
 		  return  `with: ${reason}`;
 		}
 	}
+
+	totalX = '';
+	opt1 = '';
+	opt2 = '';
+	opt3 = '';
+	opt4 = '';
+	opt5 = '';
+	opt6 = '';
+
+	onKey1(value: string) {
+		this.opt1 = value;
+		console.log(this.opt1 + '=' + this.opt2 + '=' + this.opt3 + '=' + this.opt4 + '=' + this.opt5 + '=' + this.opt6)
+	}
+
+	onKey2(value: string) {
+		this.opt2 = value;
+		console.log(this.opt1 + '=' + this.opt2 + '=' + this.opt3 + '=' + this.opt4 + '=' + this.opt5 + '=' + this.opt6)
+	}
+
+	onKey3(value: string) {
+		this.opt3 = value;
+		console.log(this.opt1 + '=' + this.opt2 + '=' + this.opt3 + '=' + this.opt4 + '=' + this.opt5 + '=' + this.opt6)
+	}
+
+	onKey4(value: string) {
+		this.opt4 = value;
+		console.log(this.opt1 + '=' + this.opt2 + '=' + this.opt3 + '=' + this.opt4 + '=' + this.opt5 + '=' + this.opt6)
+	}
+
+	onKey5(value: string) {
+		this.opt5 = value;
+		console.log(this.opt1 + '=' + this.opt2 + '=' + this.opt3 + '=' + this.opt4 + '=' + this.opt5 + '=' + this.opt6)
+	}
+
+	onKey6(value: string) {
+		this.opt6 = value;
+		console.log(this.opt1 + '=' + this.opt2 + '=' + this.opt3 + '=' + this.opt4 + '=' + this.opt5 + '=' + this.opt6)
+	}
 }
