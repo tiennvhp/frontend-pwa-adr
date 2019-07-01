@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?9z8w84');
-  src:  url('fonts/icomoon.eot?9z8w84#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?9z8w84') format('truetype'),
-    url('fonts/icomoon.woff?9z8w84') format('woff'),
-    url('fonts/icomoon.svg?9z8w84#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?3qoqw8');
+  src:  url('fonts/icomoon.eot?3qoqw8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?3qoqw8') format('truetype'),
+    url('fonts/icomoon.woff?3qoqw8') format('woff'),
+    url('fonts/icomoon.svg?3qoqw8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,86 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cellphone-16px:before {
+  content: "\e9fa";
+}
+.icon-vector:before {
+  content: "\e9f5";
+}
+.icon-ret:before {
+  content: "\e9f6";
+  color: #e53935;
+}
+.icon-info-passenger-1:before {
+  content: "\e9f7";
+  color: #bec0c8;
+}
+.icon-info-passenger:before {
+  content: "\e9f8";
+  color: #bec0c8;
+}
+.icon-help-16px1:before {
+  content: "\e9f9";
+  color: #bec0c8;
+}
+.icon-edit-circle-16px:before {
+  content: "\e9f4";
+}
+.icon-giftcode-color .path1:before {
+  content: "\e9e8";
+  color: rgb(0, 0, 0);
+}
+.icon-giftcode-color .path2:before {
+  content: "\e9e9";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-giftcode-color .path3:before {
+  content: "\e9ea";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-giftcode-color .path4:before {
+  content: "\e9eb";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-giftcode-color .path5:before {
+  content: "\e9ec";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-giftcode-color .path6:before {
+  content: "\e9ed";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-giftcode-color .path7:before {
+  content: "\e9ee";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-giftcode-color .path8:before {
+  content: "\e9ef";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-pnr-code-23px .path1:before {
+  content: "\e9f0";
+  color: rgb(0, 0, 0);
+}
+.icon-pnr-code-23px .path2:before {
+  content: "\e9f1";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-Ret:before {
+  content: "\e9f2";
+  color: #e53935;
+}
+.icon-Vector:before {
+  content: "\e9f3";
+}
 .icon-vingroup-footer:before {
   content: "\e9e7";
 }

@@ -1855,7 +1855,6 @@
               </button>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -2192,7 +2191,6 @@
 <button class="btn btn-lg btn-outline-primary" (click)="open(content4)">Tùy chọn trả góp</button>
 
 
-
 <ng-template #content5 let-modal class="effect-22">
   <div class="modal-header flex-row flex-between_center pxl-16 pxr-16 pxt-12 pxb-12 e22-4">
     <h4 class="modal-title h3-bo" id="modal-basic-title">Tư vấn hàng miễn phí</h4>
@@ -2234,6 +2232,248 @@
 
 
 
+
+
+<ng-template #content6 let-modal class="effect-22">
+  <div class="modal-header flex-row flex-between_center pxl-16 pxr-16 pxt-12 pxb-12 e22-4">
+    <h4 class="modal-title h3-bo" id="modal-basic-title">Xác minh Số điện thoại</h4>
+    <button type="button" class="close wx-24 hx-24 flex-col radius-circle bg-20 flex-center_center e22-1" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span class="icon-remove-16px fsx-16 "></span>
+    </button>    
+  </div>
+  <div class="modal-body wx-100pc e22-5 pxl-16 pxr-16 pxt-12 pxb-16">
+    <div class="flex-col flex-start_center">
+      <img src="assets/images/otp-176px.svg" alt="" class="wx-176 hx-176">
+      <button class="hx-32 shadow-0_0_16_0_0_0_2 border-1_solid_20 radius-sides_circle flex-row flex-center_center pxl-12 pxr-12">
+        <span class="icon-cellphone-16px fsx-16"></span>
+        <span class="h5-re mxl-8">0912345678</span>
+      </button>
+      <p class="mxt-12 text-align-center h5-re">
+        Vui lòng kiểm tra Số điện thoại và nhập mã bảo mật OTP bao gồm 6 chữ số để xác minh tài khoản.
+      </p>
+      <ul class="flex-row flex-center_center">
+        <li>
+          <input type="text" class="wx-40 hx-40 text-align-center radius-4_4_4_4 border-1_solid_26 h5-bo mxl-4 mxr-4">
+        </li>
+        <li>
+          <input type="text" class="wx-40 hx-40 text-align-center radius-4_4_4_4 border-1_solid_20 h5-bo mxl-4 mxr-4">
+        </li>
+        <li>
+          <input type="text" class="wx-40 hx-40 text-align-center radius-4_4_4_4 border-1_solid_20 h5-bo mxl-4 mxr-4">
+        </li>
+        <li>
+          <input type="text" class="wx-40 hx-40 text-align-center radius-4_4_4_4 border-1_solid_20 h5-bo mxl-4 mxr-4">
+        </li>
+        <li>
+          <input type="text" class="wx-40 hx-40 text-align-center radius-4_4_4_4 border-1_solid_20 h5-bo mxl-4 mxr-4">
+        </li>
+        <li>
+          <input type="text" class="wx-40 hx-40 text-align-center radius-4_4_4_4 border-1_solid_20 h5-bo mxl-4 mxr-4">
+        </li>
+      </ul>
+      <p class="mxt-16 txt-color-25 text-align-center h5-re">
+        Gửi lại mã xác nhận
+      </p>
+    </div>
+
+    <button class="mxt-12 wx-100pc bg-5 txt-color-67 h5-bo hx-40 flex-col flex-center_center radius-4_4_4_4">
+      Xác nhận ngay
+    </button>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content6)">Xác nhận ngay</button>
+
+
+<ng-template #content7 let-modal class="effect-22">
+  <div class="modal-header flex-row flex-between_center pxl-16 pxr-16 pxt-12 pxb-12 e22-4">
+    <h4 class="modal-title h3-bo" id="modal-basic-title">Quên mật khẩu</h4>
+    <button type="button" class="close wx-24 hx-24 flex-col radius-circle bg-20 flex-center_center e22-1" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span class="icon-remove-16px fsx-16 "></span>
+    </button>    
+  </div>
+  <div class="modal-body wx-100pc e22-5 pxl-16 pxr-16 pxt-12 pxb-16">
+    <p class="h5-re text-align-left">
+      Để đặt lại mật khẩu, vui lòng nhập Email/Số điện thoại bạn đã đăng ký
+    </p>
+
+    <input type="text" placeholder="Nhập Email/Số điện thoại" class="mxt-12 wx-100pc hx-40 radius-4_4_4_4 border-1_solid_20 h5-re pxl-16 pxr-16">
+
+    <button class="mxt-12 wx-100pc bg-5 txt-color-67 h5-bo hx-40 flex-col flex-center_center radius-4_4_4_4">
+      Gửi
+    </button>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content7)">Quên mật khẩu</button>
+
+
+<ng-template #content8 let-modal class="effect-22">
+  <div class="modal-header flex-row flex-between_center pxl-16 pxr-16 pxt-12 pxb-12 e22-4">
+    <h4 class="modal-title h3-bo" id="modal-basic-title">Xác minh số điện thoại
+    </h4>
+    <button type="button" class="close wx-24 hx-24 flex-col radius-circle bg-20 flex-center_center e22-1" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span class="icon-remove-16px fsx-16 "></span>
+    </button>    
+  </div>
+  <div class="modal-body wx-100pc e22-5 pxl-16 pxr-16 pxt-12 pxb-16">
+    
+    <div class="flex-col flex-start_center">
+      <img src="assets/images/security-176px.svg" alt="" class="wx-176 hx-176">
+      <p class="mxt-2 text-align-center h5-re">
+        Rất tiếc, số điện thoại của bạn tạm thời bị khóa chức năng 
+        nhận OTP qua SMS trong vòng 4 giờ. <br>
+        Vui lòng thử lại sau hoặc liên hệ <span class="h5-bo">1900 1901</span> để được hỗ trợ.
+      </p>
+    </div>
+
+    <button class="mxt-12 wx-100pc bg-5 txt-color-67 h5-bo hx-40 flex-col flex-center_center radius-4_4_4_4">
+      Tôi đã hiểu
+    </button>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content8)">Xác minh số điện thoại</button>
+
+
+<ng-template #content9 let-modal class="effect-22">
+  <div class="modal-header flex-row flex-start_center pxl-16 pxr-16 pxt-12 pxb-12 e22-4">
+    <h4 class="modal-title h3-bo" id="modal-basic-title">Đăng ký thành công
+    </h4>
+
+  </div>
+  <div class="modal-body wx-100pc e22-5 pxl-16 pxr-16 pxt-12 pxb-16">
+    
+    <div class="flex-col flex-start_center">
+      <img src="assets/images/new-account-176px.svg" alt="" class="wx-176 hx-176">
+      <p class="mxt-2 text-align-center h5-re">
+        Xin chúc mừng ! <br>
+        Bạn đã đăng ký tài khoản Adayroi thành công!
+      </p>
+
+      <div class="pxt-12 pxb-12 pxl-16 pxr-16 border-1_solid_20 shadow-0_0_16_0_0_0_2 mxt-12">
+        <p class="h5-re text-align-left">Số điện thoại của bạn đã đăng ký thẻ VinID. Hãy kết nối với tài khoản Adayroi ngay!</p>
+        <div class="wx-100pc hx-48 txt-color-67 radius-4_4_4_4 mxt-8 bg-cover flex-row flex-between_center" style="background-image: url(assets/images/vinid-mini-card.png);">
+          <span class="h3-bo mxl-16">888 5225 65213 6688</span>
+          <span class="icon-vinid-special fsx-20 mxr-16"></span>
+        </div>
+
+        <div class="flex-row flex-start_center mxt-12">
+          <span class="icon-check-16px fsx-16 txt-color-37"></span>
+          <span class="mxl-16 h6-re">Ưu đãi nhiều hơn với thẻ VinID miễn phí</span>
+        </div>
+
+        <div class="flex-row flex-start_center mxt-8">
+          <span class="icon-check-16px fsx-16 txt-color-37"></span>
+          <span class="mxl-16 h6-re">Tích điểm từ 2 - 3% khi mua sắm sản phẩm, dịch vụ tại Adayroi.com</span>
+        </div> 
+
+        <div class="flex-row flex-start_center mxt-8">
+          <span class="icon-check-16px fsx-16 txt-color-37"></span>
+          <span class="mxl-16 h6-re">Sử dụng điểm tích để mua sắm thoả sức cùng Adayroi.com</span>
+        </div>      
+      </div>
+    </div>
+
+    <div class="mxt-12 flex-row flex-between_center">
+      <button class="mxt-12 wx-180 border-1_solid_20 h5-bo hx-40 flex-col flex-center_center radius-4_4_4_4">
+        Không kết nối
+      </button>         
+      <button class="mxt-12 wx-180 bg-5 txt-color-67 h5-bo hx-40 flex-col flex-center_center radius-4_4_4_4">
+        Kết nối ngay
+      </button>      
+    </div>
+
+
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content9)">Đăng ký thành công</button>
+
+
+
+<ng-template #content10 let-modal class="effect-22">
+  <div class="modal-header flex-row flex-start_center pxl-16 pxr-16 pxt-12 pxb-12 e22-4">
+    <h4 class="modal-title h3-bo" id="modal-basic-title">Đăng ký thành công
+    </h4>
+
+  </div>
+  <div class="modal-body wx-100pc e22-5 pxl-16 pxr-16 pxt-12 pxb-16">
+    
+    <div class="flex-col flex-start_center">
+      <img src="assets/images/new-account-176px.svg" alt="" class="wx-176 hx-176">
+      <p class="mxt-2 text-align-center h5-re">
+        Xin chúc mừng ! <br>
+        Bạn đã đăng ký tài khoản Adayroi thành công!
+      </p>
+
+      <div class="pxt-12 pxb-12 pxl-16 pxr-16 border-1_solid_20 shadow-0_0_16_0_0_0_2 mxt-12">
+        <p class="h5-re text-align-left">Số điện thoại của bạn đã đăng ký thẻ VinID. Hãy kết nối với tài khoản Adayroi ngay!</p>
+        <div class="wx-100pc hx-48 radius-4_4_4_4 mxt-8 flex-row flex-between_center">
+          <span class="h3-bo mxl-16">888 5225 65213 6688</span>
+          <span class="icon-vinid-special fsx-20 mxr-16 txt-color-5"></span>
+        </div>
+
+        <div class="flex-row flex-start_center mxt-12">
+          <span class="icon-check-16px fsx-16 txt-color-37"></span>
+          <span class="mxl-16 h6-re">Ưu đãi nhiều hơn với thẻ VinID miễn phí</span>
+        </div>
+
+        <div class="flex-row flex-start_center mxt-8">
+          <span class="icon-check-16px fsx-16 txt-color-37"></span>
+          <span class="mxl-16 h6-re">Tích điểm từ 2 - 3% khi mua sắm sản phẩm, dịch vụ tại Adayroi.com</span>
+        </div> 
+
+        <div class="flex-row flex-start_center mxt-8">
+          <span class="icon-check-16px fsx-16 txt-color-37"></span>
+          <span class="mxl-16 h6-re">Sử dụng điểm tích để mua sắm thoả sức cùng Adayroi.com</span>
+        </div>      
+      </div>
+    </div>
+
+    <div class="mxt-12 flex-row flex-between_center">
+      <button class="mxt-12 wx-180 border-1_solid_20 h5-bo hx-40 flex-col flex-center_center radius-4_4_4_4">
+        Không đăng ký thẻ
+      </button>         
+      <button class="mxt-12 wx-180 bg-5 txt-color-67 h5-bo hx-40 flex-col flex-center_center radius-4_4_4_4">
+        Đăng ký ngay
+      </button>      
+    </div>
+
+
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content10)">Đăng ký thành công 2</button>
+
+
+<ng-template #content11 let-modal class="effect-22">
+  <div class="modal-header flex-row flex-start_center pxl-16 pxr-16 pxt-12 pxb-12 e22-4">
+    <h4 class="modal-title h3-bo" id="modal-basic-title">Kết nối thẻ VinID thành công
+    </h4>
+
+  </div>
+  <div class="modal-body wx-100pc e22-5 pxl-16 pxr-16 pxt-12 pxb-16">
+    
+    <div class="flex-col flex-start_center">
+      <img src="assets/images/vinid-176px.svg" alt="" class="wx-176 hx-176">
+      <p class="mxt-2 text-align-center h5-re">
+        Xin chúc mừng ! <br>
+        Chúng tôi đã kết nối thẻ VinID vào tài khoản của bạn
+      </p>
+
+      <div class="pxt-12 pxb-12 pxl-16 pxr-16 border-1_solid_20 shadow-0_0_16_0_0_0_2 mxt-12 wx-100pc">
+        <p class="h5-re text-align-left txt-color-16">Số thẻ VinID của bạn</p>
+        <div class="wx-100pc hx-48 txt-color-67 radius-4_4_4_4 mxt-8 bg-cover flex-row flex-between_center" style="background-image: url(assets/images/vinid-mini-card.png);">
+          <span class="h3-bo mxl-16">888 5225 65213 6688</span>
+          <span class="icon-vinid-special fsx-20 mxr-16"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mxt-12 hx-40 flex-row flex-center_center">
+        <p class="h5-re text-align-center">Đang chuyển trang (Tự động sau 3s)</p>
+    </div>
+
+
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content11)">Vin ID thành công</button>
 <!-- ============================= -->
 
 
