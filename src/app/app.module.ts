@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
@@ -30,6 +31,7 @@ import { MerchantPageMobileComponent } from './merchant-page-mobile/merchant-pag
 import { DetailPageMobileComponent } from './detail-page-mobile/detail-page-mobile.component';
 import { BanTheComponent } from './ban-the/ban-the.component';
 import { BanTheMobileComponent } from './ban-the-mobile/ban-the-mobile.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -59,12 +61,14 @@ import { BanTheMobileComponent } from './ban-the-mobile/ban-the-mobile.component
     DetailPageMobileComponent,
     BanTheComponent,
     BanTheMobileComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
     SlickCarouselModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

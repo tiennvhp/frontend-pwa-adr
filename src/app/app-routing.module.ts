@@ -10,6 +10,7 @@ import { MerchantPageMobileComponent } from './merchant-page-mobile/merchant-pag
 import { DetailPageMobileComponent } from './detail-page-mobile/detail-page-mobile.component';
 import { BanTheComponent } from './ban-the/ban-the.component';
 import { BanTheMobileComponent } from './ban-the-mobile/ban-the-mobile.component';
+import { AccountComponent } from './account/account.component';
 
  
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'merchant-mobile', component: MerchantPageMobileComponent },
   { path: 'ban-the', component: BanTheComponent },
   { path: 'ban-the-mobile', component: BanTheMobileComponent },
+  { path: 'account', component: AccountComponent },
 ];
  
 @NgModule({
