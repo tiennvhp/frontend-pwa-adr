@@ -32,6 +32,7 @@ import { DetailPageMobileComponent } from './detail-page-mobile/detail-page-mobi
 import { BanTheComponent } from './ban-the/ban-the.component';
 import { BanTheMobileComponent } from './ban-the-mobile/ban-the-mobile.component';
 import { AccountComponent } from './account/account.component';
+import { AccountMobileComponent } from './account-mobile/account-mobile.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { AccountComponent } from './account/account.component';
     BanTheComponent,
     BanTheMobileComponent,
     AccountComponent,
+    AccountMobileComponent,
   ],
   imports: [
     BrowserModule,

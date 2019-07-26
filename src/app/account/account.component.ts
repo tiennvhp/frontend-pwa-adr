@@ -18,11 +18,19 @@ export class AccountComponent implements OnInit {
 
 	closeResult: string;
 	open(content) {
-		console.log(content)
 		this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title', windowClass: 'effect-24'}).result.then((result) => {
 		  this.closeResult = `Closed with: ${result}`;
 		}, (reason) => {
 		  this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+		});
+	}
+
+	closeResultEnterAddress: string;
+	openEnterAddress(content) {
+		this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title', windowClass: 'effect-28'}).result.then((result) => {
+		  this.closeResultEnterAddress = `Closed with: ${result}`;
+		}, (reason) => {
+		  this.closeResultEnterAddress = `Dismissed ${this.getDismissReason(reason)}`;
 		});
 	}
 
