@@ -616,6 +616,11 @@
 }
 
 .effect-31 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  padding-right: 0px !important;
+  padding-left: 16px !important;
+  width: 100%;
   &:active {
     background: transparent;
   }
@@ -662,4 +667,76 @@
     top: 12px;
     left: 57px;
   }
+}
+
+.effect-36 {
+  position: relative;
+  .quantity-button {
+    width: calc(100vw * 48 / 360);
+    height: calc(100vw * 40 / 360);
+  }
+
+  .input-text {
+    width: calc(100vw * 64 / 360);
+    height: calc(100vw * 40 / 360);
+  }
+
+  .product-quantity {
+    margin-left: 0px !important;
+  }
+}
+
+.effect-37 {
+  position: relative;
+  top: calc(100vw * -110 / 360);
+}
+
+.effect-38 {
+  opacity: 0.5;
+}
+
+.effect-39 {
+  &:after {
+    display: none;
+  }
+}
+
+.effect-40 {
+  .dropdown-menu {
+    left:-337px !important;
+  }
+}
+
+.effect-41 {
+  .dropdown-menu {
+    width: calc(100vw - 100vw * 32 / 360);
+    left: calc(100vw * -296 / 360) !important;
+  }
+}
+
+.effect-42 {
+  position: fixed;
+  z-index: 4;
+  background: white;
+  width: 100vw;
+  left: 0px;
+  bottom: 0px;  
+  padding-left: calc(100vw * 16 / 360);
+  padding-right: calc(100vw * 16 / 360);
+  padding-bottom: calc(100vw * 8 / 360);
+  
+}
+
+.effect-43 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.effect-44 {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 36px;
 }

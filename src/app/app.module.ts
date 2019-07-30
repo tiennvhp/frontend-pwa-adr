@@ -33,6 +33,7 @@ import { BanTheComponent } from './ban-the/ban-the.component';
 import { BanTheMobileComponent } from './ban-the-mobile/ban-the-mobile.component';
 import { AccountComponent } from './account/account.component';
 import { AccountMobileComponent } from './account-mobile/account-mobile.component';
+import { HelpCenterComponent } from './help-center/help-center.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { AccountMobileComponent } from './account-mobile/account-mobile.componen
     BanTheMobileComponent,
     AccountComponent,
     AccountMobileComponent,
+    HelpCenterComponent,
   ],
   imports: [
     BrowserModule,
