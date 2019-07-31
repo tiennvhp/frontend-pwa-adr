@@ -2,7 +2,6 @@
 	.n15-1 {
 		padding-left: calc(100vw * 16 / 360);
 		padding-right: calc(100vw * 16 / 360);
-		// padding-top: calc(100vw * 48 / 360);
 	}
 
 	.n15-2 {
@@ -14,7 +13,7 @@
 	}
 
 	.n15-4 {
-		padding: calc(100vw * 12 / 360) calc(100vw * 12 / 360) calc(100vw * 12 / 360) calc(100vw * 12 / 360);
+		padding: calc(100vw  12 / 360) calc(100vw  12 / 360) calc(100vw  12 / 360) calc(100vw  12 / 360);
 	}
 
 	.n15-5 {
@@ -143,11 +142,7 @@
 	}
 
 	.n15-26 {
-		right: calc(100vw * 8 / 360);
+		right: calc(100vw * 34 / 360);
 		font-size: calc(100vw * 24 / 360);
-	}
-
-	.n15-27 {
-		padding-top: calc(100vw * 48 / 360);
 	}
 }
